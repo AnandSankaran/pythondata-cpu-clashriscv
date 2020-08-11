@@ -1,7 +1,7 @@
 import os.path
 __dir__ = os.path.split(os.path.abspath(os.path.realpath(__file__)))[0]
 data_location = os.path.join(__dir__, "verilog")
-src = "https://github.com/m-labs/lm32.git"
+src = "https://github.com/anandsankaran/pythondata-cpu-clashriscv.git"
 
 # Module version
 version_str = "0.0.post117"
@@ -47,9 +47,9 @@ except ImportError:
 
 
 def data_file(f):
-    """Get absolute path for file inside pythondata_cpu_lm32."""
+    """Get absolute path for file inside pythondata_cpu_clashriscv."""
     fn = os.path.join(data_location, f)
     fn = os.path.abspath(fn)
     if not os.path.exists(fn):
-        raise IOError("File {f} doesn't exist in pythondata_cpu_lm32".format(f))
+        raise IOError("File {f} doesn't exist in pythondata_cpu_clashriscv".format(f))
     return fn
