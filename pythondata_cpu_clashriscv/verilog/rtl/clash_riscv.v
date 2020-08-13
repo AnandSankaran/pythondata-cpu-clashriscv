@@ -31,20 +31,22 @@ module clash_riscv
     , output wire [2:0] dBusWishbone_CTI
     , output wire [1:0] dBusWishbone_BTE
     );
+  wire  result;
+  wire  c$case_alt;
   reg  c$app_arg;
-  wire [32:0] c$case_alt;
+  wire [32:0] c$case_alt_0;
   wire [32:0] fromDataMem;
-  wire [2065:0] result;
+  wire [2065:0] result_0;
   reg [31:0] pipeline_lvl52_c$app_arg = 32'd0;
   reg [31:0] pipeline_lvl52_pc_3 = 32'd0;
   wire [31:0] memDataToWrite_3;
   reg [31:0] pipeline_lvl54_rs2Data_3 = 32'b00000000000000000000000000000000;
   reg  pipeline_lvl53_forwardMemToStage3_3 = 1'b0;
   wire  forwardMemToStage3_2;
-  wire [3:0] result_0;
-  reg [3:0] c$case_alt_0;
+  wire [3:0] result_1;
   reg [3:0] c$case_alt_1;
-  reg [3:0] result_1;
+  reg [3:0] c$case_alt_2;
+  reg [3:0] result_2;
   reg  pipeline_lvl53_memWriteEnable_3 = 1'b0;
   wire  memWriteEnable_2;
   wire [29:0] x;
@@ -54,84 +56,84 @@ module clash_riscv
   wire [4:0] c$forwardMemToStage3_2_app_arg;
   wire  stallStage2OrEarlier;
   wire [6:0] c$stallStage2OrEarlier_app_arg;
-  reg  result_2;
+  reg  result_3;
   wire [6:0] c$app_arg_0;
   wire [4:0] c$stallStage2OrEarlier_app_arg_0;
   wire [4:0] c$rs1Addr_1_app_arg;
   reg [31:0] instr_1 = 32'b00000000000000000000000000000000;
-  wire [31:0] result_3;
+  wire [31:0] result_4;
   wire  b;
   wire [0:0] bv;
-  reg  result_4;
-  wire  c$case_alt_2;
+  reg  result_5;
+  wire  c$case_alt_3;
   reg  c$branchCompare_$jOut_app_arg;
   wire  c$branchCompare_$jOut_case_alt;
   wire [2:0] compareOp_2;
-  wire [31:0] result_5;
+  wire [31:0] result_6;
   reg [31:0] t;
   reg [31:0] pipeline_lvl54_rs2Data_2 = 32'b00000000000000000000000000000000;
   wire signed [63:0] wild1;
-  wire [31:0] result_6;
+  wire [31:0] result_7;
   wire signed [63:0] c$wild1_app_arg;
-  reg [31:0] result_7;
+  reg [31:0] result_8;
   reg [1:0] pipeline_lvl56_forwardALUOp2_2 = 2'd2;
   wire [1:0] \$j ;
-  wire [1:0] result_8;
-  wire [1:0] c$case_alt_3;
-  reg  result_9;
+  wire [1:0] result_9;
+  wire [1:0] c$case_alt_4;
+  reg  result_10;
   wire [6:0] c$app_arg_1;
   wire [1:0] c$$j_case_alt;
-  reg  result_10;
+  reg  result_11;
   wire [6:0] c$app_arg_2;
-  reg [1:0] result_11;
+  reg [1:0] result_12;
   wire [4:0] rs2Addr_1;
   wire [4:0] c$rs2Addr_1_app_arg;
-  reg [31:0] result_12;
+  reg [31:0] result_13;
   reg [31:0] pipeline_lvl54_execRes_4 = 32'b00000000000000000000000000000000;
   reg [1:0] destRegSource_4 = 2'd0;
-  wire [1:0] c$case_alt_4;
+  wire [1:0] c$case_alt_5;
   reg  c$case_scrut;
-  reg [1:0] result_13;
+  reg [1:0] result_14;
   reg [31:0] pipeline_lvl54_memReadData_4 = 32'b00000000000000000000000000000000;
   wire  \unsigned ;
-  wire [31:0] result_14;
+  wire [31:0] result_15;
   wire signed [63:0] wild1_0;
-  wire [15:0] result_15;
+  wire [15:0] result_16;
   wire [31:0] c$karg_app_arg;
   wire [31:0] c$karg_app_arg_0;
   wire signed [63:0] c$wild1_app_arg_0;
-  wire [31:0] result_16;
+  wire [31:0] result_17;
   wire signed [63:0] wild1_1;
-  wire [7:0] result_17;
+  wire [7:0] result_18;
   wire [31:0] c$karg_app_arg_1;
   wire [31:0] c$karg_app_arg_2;
   wire signed [63:0] c$wild1_app_arg_1;
-  reg [31:0] result_18;
+  reg [31:0] result_19;
   wire [1:0] c$memReadData_3_app_arg;
   reg [31:0] pipeline_lvl54_execRes_3 = 32'b00000000000000000000000000000000;
-  wire [31:0] result_19;
-  reg [31:0] pipeline_lvl54_t = 32'b00000000000000000000000000000000;
   wire [31:0] result_20;
+  reg [31:0] pipeline_lvl54_t = 32'b00000000000000000000000000000000;
+  wire [31:0] result_21;
   wire [31:0] t_0;
   wire [31:0] f2;
   reg  pipeline_lvl53_b = 1'b0;
   wire  c$b_app_arg;
-  wire [63:0] result_21;
-  reg [31:0] result_22;
+  wire [63:0] result_22;
+  reg [31:0] result_23;
   wire [31:0] addSub;
   wire [31:0] x_1;
   wire [31:0] x_2;
   wire [31:0] x_3;
   wire [31:0] x_4;
-  wire [31:0] c$case_alt_5;
   wire [31:0] c$case_alt_6;
   wire [31:0] c$case_alt_7;
+  wire [31:0] c$case_alt_8;
   wire signed [32:0] c$x_app_arg;
   wire signed [63:0] c$x_app_arg_0;
   wire [63:0] c$x_app_arg_1;
   wire signed [31:0] c$app_arg_3;
   wire signed [31:0] c$app_arg_4;
-  wire signed [63:0] result_23;
+  wire signed [63:0] result_24;
   wire signed [63:0] wild;
   wire signed [63:0] c$wild_app_arg;
   wire [63:0] x_5;
@@ -140,41 +142,41 @@ module clash_riscv
   wire [31:0] \c$times#Out_app_arg_0 ;
   wire [31:0] c$eta_app_arg;
   wire [31:0] c$app_arg_5;
-  wire [95:0] result_24;
+  wire [95:0] result_25;
   wire [3167:0] c$eta_app_arg_0;
   wire [31:0] c$app_arg_6;
   wire [31:0] c$app_arg_7;
-  wire [63:0] result_25;
+  wire [63:0] result_26;
   wire [95:0] eta;
   wire signed [63:0] wild_0;
-  wire signed [63:0] result_26;
+  wire signed [63:0] result_27;
   wire signed [63:0] c$wild_app_arg_0;
   wire [197:0] c$wild_app_arg_1;
-  wire [5:0] result_27;
+  wire [5:0] result_28;
   wire [32:0] c$wild_app_arg_app_arg;
   reg [63:0] c$ds_case_alt;
-  wire [63:0] result_28;
-  wire signed [63:0] x1;
   wire [63:0] result_29;
-  reg [63:0] c$ds_case_alt_0;
+  wire signed [63:0] x1;
   wire [63:0] result_30;
+  reg [63:0] c$ds_case_alt_0;
+  wire [63:0] result_31;
   reg [63:0] c$ds_case_alt_1;
   wire signed [63:0] x2;
   wire signed [63:0] wild_1;
-  wire signed [63:0] result_31;
+  wire signed [63:0] result_32;
   wire signed [63:0] c$wild_app_arg_2;
   wire [197:0] c$wild_app_arg_3;
-  wire [5:0] result_32;
+  wire [5:0] result_33;
   wire [32:0] c$wild_app_arg_app_arg_0;
   reg [63:0] c$ds_case_alt_2;
   wire signed [63:0] x1_0;
   wire signed [63:0] wild_2;
-  wire signed [63:0] result_33;
+  wire signed [63:0] result_34;
   wire signed [63:0] c$wild_app_arg_4;
   wire [197:0] c$wild_app_arg_5;
-  wire [5:0] result_34;
+  wire [5:0] result_35;
   wire [32:0] c$wild_app_arg_app_arg_1;
-  wire [63:0] result_35;
+  wire [63:0] result_36;
   wire [63:0] c$ds1_case_alt;
   wire [63:0] c$ds1_case_alt_0;
   wire  c$ds1_case_scrut;
@@ -182,11 +184,11 @@ module clash_riscv
   wire [31:0] c$ds1_app_arg_0;
   wire [31:0] c$eta_app_arg_1;
   wire [31:0] c$app_arg_8;
-  wire [95:0] result_36;
+  wire [95:0] result_37;
   wire [3167:0] c$eta_app_arg_2;
   wire [31:0] c$app_arg_9;
   wire [31:0] c$app_arg_10;
-  wire [63:0] result_37;
+  wire [63:0] result_38;
   wire [95:0] eta_0;
   wire [31:0] c$ds2_app_arg;
   wire  c$ds2_app_arg_0;
@@ -195,23 +197,23 @@ module clash_riscv
   wire signed [31:0] c$ds2_app_arg_2;
   wire  c$ds2_app_arg_3;
   wire signed [31:0] c$ds_app_arg;
-  reg [3:0] result_38;
-  reg [3:0] c$case_alt_8;
   reg [3:0] result_39;
+  reg [3:0] c$case_alt_9;
   reg [3:0] result_40;
-  wire [6:0] c$$j_case_scrut;
   reg [3:0] result_41;
+  wire [6:0] c$$j_case_scrut;
+  reg [3:0] result_42;
   wire [2:0] ds;
   wire [0:0] bv_0;
-  reg  result_42;
-  wire [31:0] result_43;
+  reg  result_43;
+  wire [31:0] result_44;
   wire [31:0] f2_0;
   reg [31:0] pipeline_lvl52_pc_2 = 32'd0;
   reg [31:0] pc_1 = 32'd0;
   reg [31:0] pc_0 = 32'd4294967292;
   wire [31:0] \c$$j_0 ;
-  wire [31:0] result_44;
-  wire [31:0] c$case_alt_9;
+  wire [31:0] result_45;
+  wire [31:0] c$case_alt_10;
   reg [31:0] c$$j_case_alt_0;
   wire [31:0] c$$j_case_alt_1;
   wire [19:0] x_6;
@@ -225,33 +227,33 @@ module clash_riscv
   reg [31:0] t_1;
   reg [31:0] pipeline_lvl54_rs1Data_2 = 32'b00000000000000000000000000000000;
   wire signed [63:0] wild1_2;
-  wire [31:0] result_45;
+  wire [31:0] result_46;
   wire signed [63:0] c$wild1_app_arg_2;
-  reg [31:0] result_46;
+  reg [31:0] result_47;
   reg [1023:0] c$ds_app_arg_0 = {32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000};
-  wire [1023:0] result_47;
+  wire [1023:0] result_48;
   wire [1023:0] \regFile' ;
-  wire [2047:0] result_48;
+  wire [2047:0] result_49;
   wire signed [63:0] wild2;
-  wire [1023:0] result_49;
+  wire [1023:0] result_50;
   wire signed [63:0] c$wild2_app_arg;
   reg  pipeline_lvl53_regWriteEn_4 = 1'b0;
   reg  pipeline_lvl53_regWriteEn_3 = 1'b0;
-  reg  result_50;
+  reg  result_51;
   wire [6:0] c$app_arg_11;
   wire [4:0] rdAddr_4;
   wire [4:0] c$rdAddr_4_app_arg;
   reg [31:0] pipeline_lvl54_instr_4 = 32'b00000000000000000000000000000000;
   reg [1:0] pipeline_lvl56_forwardALUOp1_2 = 2'd2;
   wire [1:0] \c$$j_1 ;
-  wire [1:0] result_51;
-  wire [1:0] c$case_alt_10;
-  reg  result_52;
+  wire [1:0] result_52;
+  wire [1:0] c$case_alt_11;
+  reg  result_53;
   wire [6:0] c$app_arg_12;
   wire [1:0] c$$j_case_alt_2;
-  reg  result_53;
+  reg  result_54;
   wire [6:0] c$app_arg_13;
-  reg [1:0] result_54;
+  reg [1:0] result_55;
   wire [4:0] rs1Addr_1;
   reg  pipeline_lvl53_aluOp1IsRegister_2 = 1'b0;
   reg  aluOp1IsRegister_1;
@@ -261,16 +263,16 @@ module clash_riscv
   reg [31:0] pipeline_lvl54_instr_2 = 32'b00000000000000000000000000000000;
   wire [31:0] c$instr_2_app_arg;
   reg [31:0] pipeline_lvl54_imm_2 = 32'b00000000000000000000000000000000;
-  reg [31:0] result_55;
+  reg [31:0] result_56;
   wire [11:0] x_8;
-  wire [31:0] result_56;
+  wire [31:0] result_57;
   wire [11:0] x_9;
   reg  pipeline_lvl53_aluOp2IsRegister_2 = 1'b0;
   reg  aluOp2IsRegister_1;
   wire  c$aluOp2IsRegister_1_case_alt;
   wire  c$b_app_arg_0;
   wire [6:0] c$b_app_arg_1;
-  wire [31:0] result_57;
+  wire [31:0] result_58;
   reg  pipeline_lvl53_b_0 = 1'b0;
   wire  instrStall;
   wire [31:0] f2_1;
@@ -280,17 +282,18 @@ module clash_riscv
   wire [31:0] wrAddr;
   wire [31:0] dat;
   wire [3:0] strb;
-  wire [75:0] c$case_alt_11;
+  wire [75:0] c$case_alt_12;
   reg [31:0] c$app_arg_14;
+  reg  instructionSTB = 1'b1;
   wire [29:0] addr1;
   wire [33:0] fimWB;
   wire [33:0] fdmWB;
   wire [0:0] c$app_arg_selection_res;
   wire [31:0] c$bv;
-  wire [0:0] c$case_alt_0_selection_res;
+  wire [0:0] c$case_alt_1_selection_res;
   wire [1:0] c$branchCompare_$jOut_app_arg_selection_res;
   wire [3:0] c$case_scrut_selection_res;
-  wire [6:0] result_13_selection_res;
+  wire [6:0] result_14_selection_res;
   wire signed [15:0] c$s;
   wire [31:0] c$vec;
   wire [0:0] c$bv_0;
@@ -309,13 +312,13 @@ module clash_riscv
   wire [31:0] c$vec_73;
   wire [31:0] c$vec_138;
   wire [31:0] c$vec_139;
-  wire [6:0] c$case_alt_8_selection_res;
-  wire [6:0] result_42_selection_res;
+  wire [6:0] c$case_alt_9_selection_res;
+  wire [6:0] result_43_selection_res;
   wire [6:0] c$$j_case_alt_0_selection_res;
   wire signed [11:0] c$s_1;
   wire signed [19:0] c$s_2;
   wire [1:0] c$memReadData_3_app_arg_0_selection_res;
-  wire [6:0] result_55_selection_res;
+  wire [6:0] result_56_selection_res;
   wire signed [11:0] c$s_3;
   wire signed [11:0] c$s_4;
   wire [149:0] _clash_internal;
@@ -330,78 +333,82 @@ module clash_riscv
                  ,dBusWishbone_ACK
                  ,dBusWishbone_ERR};
 
+  assign result = ((fimWB[1:1]) == 1'b1) ? 1'b0 : 1'b1;
+
+  assign c$case_alt = instructionSTB ? 1'b0 : 1'b1;
+
   assign c$app_arg_selection_res = fimWB[1:1];
 
   always @(*) begin
     case(c$app_arg_selection_res)
-      1'b1 : c$app_arg = 1'b0;
+      1'b1 : c$app_arg = c$case_alt;
       default : c$app_arg = 1'b1;
     endcase
   end
 
-  assign c$case_alt = {fimWB[33:2],c$app_arg};
+  assign c$case_alt_0 = {fimWB[33:2],c$app_arg};
 
   assign fromDataMem = {fdmWB[33:2]
                        ,(fdmWB[1:1]) == 1'b1};
 
-  assign c$bv = (result_44);
+  assign c$bv = (result_45);
 
-  assign result = {(c$bv[31 : 2])
-                  ,{({2'b00,x_0})
-                   ,({2'b00,x})
-                   ,memDataToWrite_3
-                   ,result_0}
-                  ,{{pc_0,result_44,result_3}
-                   ,{instr_1
-                    ,pc_1
-                    ,rs1Addr_1
-                    ,rs2Addr_1
-                    ,result_55
-                    ,aluOp1IsRegister_1
-                    ,aluOp2IsRegister_1
-                    ,result_47
-                    ,result_46
-                    ,result_7
-                    ,result_54
-                    ,result_11}
-                   ,{pipeline_lvl52_pc_2
-                    ,pipeline_lvl54_instr_2
-                    ,pipeline_lvl54_rs1Data_2
-                    ,pipeline_lvl54_rs2Data_2
-                    ,pipeline_lvl53_aluOp1IsRegister_2
-                    ,pipeline_lvl53_aluOp2IsRegister_2
-                    ,pipeline_lvl54_imm_2
-                    ,result_38
-                    ,result_42
-                    ,memWriteEnable_2
-                    ,result_50
-                    ,compareOp_2
-                    ,result_43
-                    ,result_5
-                    ,result_19
-                    ,result_4
-                    ,pipeline_lvl56_forwardALUOp1_2
-                    ,pipeline_lvl56_forwardALUOp2_2
-                    ,forwardMemToStage3_2
-                    ,forwardMemToStage2_2}
-                   ,{pipeline_lvl52_pc_3
-                    ,pipeline_lvl54_instr_3
-                    ,pipeline_lvl54_execRes_3
-                    ,pipeline_lvl54_rs2Data_3
-                    ,pipeline_lvl53_memWriteEnable_3
-                    ,pipeline_lvl53_regWriteEn_3
-                    ,pipeline_lvl53_forwardMemToStage3_3
-                    ,result_13
-                    ,result_18
-                    ,memDataToWrite_3}
-                   ,{pipeline_lvl52_c$app_arg
-                    ,pipeline_lvl54_instr_4
-                    ,pipeline_lvl54_execRes_4
-                    ,rdAddr_4
-                    ,pipeline_lvl53_regWriteEn_4
-                    ,destRegSource_4
-                    ,pipeline_lvl54_memReadData_4
-                    ,result_12}}};
+  assign result_0 = {(c$bv[31 : 2])
+                    ,{({2'b00,x_0})
+                     ,({2'b00,x})
+                     ,memDataToWrite_3
+                     ,result_1}
+                    ,{{pc_0,result_45,result_4}
+                     ,{instr_1
+                      ,pc_1
+                      ,rs1Addr_1
+                      ,rs2Addr_1
+                      ,result_56
+                      ,aluOp1IsRegister_1
+                      ,aluOp2IsRegister_1
+                      ,result_48
+                      ,result_47
+                      ,result_8
+                      ,result_55
+                      ,result_12}
+                     ,{pipeline_lvl52_pc_2
+                      ,pipeline_lvl54_instr_2
+                      ,pipeline_lvl54_rs1Data_2
+                      ,pipeline_lvl54_rs2Data_2
+                      ,pipeline_lvl53_aluOp1IsRegister_2
+                      ,pipeline_lvl53_aluOp2IsRegister_2
+                      ,pipeline_lvl54_imm_2
+                      ,result_39
+                      ,result_43
+                      ,memWriteEnable_2
+                      ,result_51
+                      ,compareOp_2
+                      ,result_44
+                      ,result_6
+                      ,result_20
+                      ,result_5
+                      ,pipeline_lvl56_forwardALUOp1_2
+                      ,pipeline_lvl56_forwardALUOp2_2
+                      ,forwardMemToStage3_2
+                      ,forwardMemToStage2_2}
+                     ,{pipeline_lvl52_pc_3
+                      ,pipeline_lvl54_instr_3
+                      ,pipeline_lvl54_execRes_3
+                      ,pipeline_lvl54_rs2Data_3
+                      ,pipeline_lvl53_memWriteEnable_3
+                      ,pipeline_lvl53_regWriteEn_3
+                      ,pipeline_lvl53_forwardMemToStage3_3
+                      ,result_14
+                      ,result_19
+                      ,memDataToWrite_3}
+                     ,{pipeline_lvl52_c$app_arg
+                      ,pipeline_lvl54_instr_4
+                      ,pipeline_lvl54_execRes_4
+                      ,rdAddr_4
+                      ,pipeline_lvl53_regWriteEn_4
+                      ,destRegSource_4
+                      ,pipeline_lvl54_memReadData_4
+                      ,result_13}}};
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl52_c$app_arg_register
@@ -423,7 +430,7 @@ module clash_riscv
   end
   // register end
 
-  assign memDataToWrite_3 = pipeline_lvl53_forwardMemToStage3_3 ? result_12 : pipeline_lvl54_rs2Data_3;
+  assign memDataToWrite_3 = pipeline_lvl53_forwardMemToStage3_3 ? result_13 : pipeline_lvl54_rs2Data_3;
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl54_rs2Data_3_register
@@ -447,32 +454,32 @@ module clash_riscv
 
   assign forwardMemToStage3_2 = (c$forwardMemToStage3_2_app_arg == (pipeline_lvl54_instr_3[11 : 7])) & pipeline_lvl53_regWriteEn_3;
 
-  assign result_0 = pipeline_lvl53_memWriteEnable_3 ? result_1 : 4'b0000;
+  assign result_1 = pipeline_lvl53_memWriteEnable_3 ? result_2 : 4'b0000;
 
-  assign c$case_alt_0_selection_res = c$memReadData_3_app_arg[1 : 1];
+  assign c$case_alt_1_selection_res = c$memReadData_3_app_arg[1 : 1];
 
   always @(*) begin
-    case(c$case_alt_0_selection_res)
-      1'b1 : c$case_alt_0 = 4'b1100;
-      default : c$case_alt_0 = 4'b0011;
+    case(c$case_alt_1_selection_res)
+      1'b1 : c$case_alt_1 = 4'b1100;
+      default : c$case_alt_1 = 4'b0011;
     endcase
   end
 
   always @(*) begin
     case(c$memReadData_3_app_arg)
-      2'b00 : c$case_alt_1 = 4'b0001;
-      2'b01 : c$case_alt_1 = 4'b0010;
-      2'b10 : c$case_alt_1 = 4'b0100;
-      2'b11 : c$case_alt_1 = 4'b1000;
-      default : c$case_alt_1 = {4 {1'bx}};
+      2'b00 : c$case_alt_2 = 4'b0001;
+      2'b01 : c$case_alt_2 = 4'b0010;
+      2'b10 : c$case_alt_2 = 4'b0100;
+      2'b11 : c$case_alt_2 = 4'b1000;
+      default : c$case_alt_2 = {4 {1'bx}};
     endcase
   end
 
   always @(*) begin
     case(c$memReadData_3_app_arg_0)
-      2'b00 : result_1 = c$case_alt_1;
-      2'b01 : result_1 = c$case_alt_0;
-      default : result_1 = 4'b1111;
+      2'b00 : result_2 = c$case_alt_2;
+      2'b01 : result_2 = c$case_alt_1;
+      default : result_2 = 4'b1111;
     endcase
   end
 
@@ -492,24 +499,24 @@ module clash_riscv
 
   assign x_0 = aluAddSub[31 : 2];
 
-  assign c$rs2Data_3_app_arg = forwardMemToStage2_2 ? result_12 : pipeline_lvl54_rs2Data_2;
+  assign c$rs2Data_3_app_arg = forwardMemToStage2_2 ? result_13 : pipeline_lvl54_rs2Data_2;
 
   assign forwardMemToStage2_2 = (c$forwardMemToStage3_2_app_arg == c$rdAddr_4_app_arg) & pipeline_lvl53_regWriteEn_4;
 
   assign c$forwardMemToStage3_2_app_arg = pipeline_lvl54_instr_2[24 : 20];
 
-  assign stallStage2OrEarlier = (((c$rs1Addr_1_app_arg == c$stallStage2OrEarlier_app_arg_0) & result_2) | ((c$rs2Addr_1_app_arg == c$stallStage2OrEarlier_app_arg_0) & aluOp2IsRegister_1)) & (c$stallStage2OrEarlier_app_arg == 7'b0000011);
+  assign stallStage2OrEarlier = (((c$rs1Addr_1_app_arg == c$stallStage2OrEarlier_app_arg_0) & result_3) | ((c$rs2Addr_1_app_arg == c$stallStage2OrEarlier_app_arg_0) & aluOp2IsRegister_1)) & (c$stallStage2OrEarlier_app_arg == 7'b0000011);
 
   assign c$stallStage2OrEarlier_app_arg = pipeline_lvl54_instr_2[6 : 0];
 
   always @(*) begin
     case(c$app_arg_0)
-      7'b0110011 : result_2 = 1'b1;
-      7'b0010011 : result_2 = 1'b1;
-      7'b1100111 : result_2 = 1'b1;
-      7'b1100011 : result_2 = 1'b1;
-      7'b0100011 : result_2 = 1'b1;
-      default : result_2 = c$app_arg_0 == 7'b0000011;
+      7'b0110011 : result_3 = 1'b1;
+      7'b0010011 : result_3 = 1'b1;
+      7'b1100111 : result_3 = 1'b1;
+      7'b1100011 : result_3 = 1'b1;
+      7'b0100011 : result_3 = 1'b1;
+      default : result_3 = c$app_arg_0 == 7'b0000011;
     endcase
   end
 
@@ -524,47 +531,47 @@ module clash_riscv
     if ( reset) begin
       instr_1 <= 32'b00000000000000000000000000000000;
     end else  if (c$pc_1_app_arg)  begin
-      instr_1 <= result_3;
+      instr_1 <= result_4;
     end
   end
   // register end
 
-  assign result_3 = b ? 32'b00000000000000000000000000000000 : result_57;
+  assign result_4 = b ? 32'b00000000000000000000000000000000 : result_58;
 
-  assign b = c$b_app_arg_0 | (isJumpingViaRegister_1 | (c$aluOp2IsRegister_1_case_alt | (((~ result_4) & pipeline_lvl53_isBranching_2) | (pipeline_lvl53_isJumpingViaRegister_2 | instrStall))));
+  assign b = c$b_app_arg_0 | (isJumpingViaRegister_1 | (c$aluOp2IsRegister_1_case_alt | (((~ result_5) & pipeline_lvl53_isBranching_2) | (pipeline_lvl53_isJumpingViaRegister_2 | instrStall))));
 
   assign bv = compareOp_2[0 : 0];
 
   always @(*) begin
     case(bv)
-      1'b1 : result_4 = c$case_alt_2;
-      default : result_4 = c$branchCompare_$jOut_app_arg;
+      1'b1 : result_5 = c$case_alt_3;
+      default : result_5 = c$branchCompare_$jOut_app_arg;
     endcase
   end
 
-  assign c$case_alt_2 = c$branchCompare_$jOut_app_arg ? 1'b0 : 1'b1;
+  assign c$case_alt_3 = c$branchCompare_$jOut_app_arg ? 1'b0 : 1'b1;
 
   assign c$branchCompare_$jOut_app_arg_selection_res = compareOp_2[2 : 1];
 
   always @(*) begin
     case(c$branchCompare_$jOut_app_arg_selection_res)
       2'b00 : c$branchCompare_$jOut_app_arg = c$branchCompare_$jOut_case_alt;
-      2'b10 : c$branchCompare_$jOut_app_arg = ($signed(result_43)) < ($signed(result_5));
-      2'b11 : c$branchCompare_$jOut_app_arg = (result_43) < (result_5);
+      2'b10 : c$branchCompare_$jOut_app_arg = ($signed(result_44)) < ($signed(result_6));
+      2'b11 : c$branchCompare_$jOut_app_arg = (result_44) < (result_6);
       default : c$branchCompare_$jOut_app_arg = c$branchCompare_$jOut_case_alt;
     endcase
   end
 
-  assign c$branchCompare_$jOut_case_alt = result_43 == result_5;
+  assign c$branchCompare_$jOut_case_alt = result_44 == result_6;
 
   assign compareOp_2 = pipeline_lvl54_instr_2[14 : 12];
 
-  assign result_5 = pipeline_lvl53_aluOp2IsRegister_2 ? t : pipeline_lvl54_imm_2;
+  assign result_6 = pipeline_lvl53_aluOp2IsRegister_2 ? t : pipeline_lvl54_imm_2;
 
   always @(*) begin
     case(pipeline_lvl56_forwardALUOp2_2)
       2'b00 : t = pipeline_lvl54_execRes_3;
-      2'b01 : t = result_12;
+      2'b01 : t = result_13;
       default : t = pipeline_lvl54_rs2Data_2;
     endcase
   end
@@ -574,7 +581,7 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl54_rs2Data_2 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_rs2Data_2 <= result_7;
+      pipeline_lvl54_rs2Data_2 <= result_8;
     end
   end
   // register end
@@ -586,18 +593,18 @@ module clash_riscv
   genvar i;
   generate
   for (i=0; i < 32; i=i+1) begin : mk_array
-    assign vecArray[(32-1)-i] = result_47[i*32+:32];
+    assign vecArray[(32-1)-i] = result_48[i*32+:32];
   end
   endgenerate
-  assign result_6 = vecArray[(wild1)];
+  assign result_7 = vecArray[(wild1)];
   // index end
 
   assign c$wild1_app_arg = $unsigned({{(64-5) {1'b0}},rs2Addr_1});
 
   always @(*) begin
     case(rs2Addr_1)
-      5'd0 : result_7 = 32'b00000000000000000000000000000000;
-      default : result_7 = result_6;
+      5'd0 : result_8 = 32'b00000000000000000000000000000000;
+      default : result_8 = result_7;
     endcase
   end
 
@@ -606,42 +613,42 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl56_forwardALUOp2_2 <= 2'd2;
     end else   begin
-      pipeline_lvl56_forwardALUOp2_2 <= result_11;
+      pipeline_lvl56_forwardALUOp2_2 <= result_12;
     end
   end
   // register end
 
   assign \$j  = (((pipeline_lvl54_instr_3[11 : 7])) == rs2Addr_1) ? c$$j_case_alt : 2'd2;
 
-  assign result_8 = (((pipeline_lvl54_instr_2[11 : 7])) == rs2Addr_1) ? c$case_alt_3 : \$j ;
+  assign result_9 = (((pipeline_lvl54_instr_2[11 : 7])) == rs2Addr_1) ? c$case_alt_4 : \$j ;
 
-  assign c$case_alt_3 = result_9 ? 2'd0 : \$j ;
+  assign c$case_alt_4 = result_10 ? 2'd0 : \$j ;
 
   always @(*) begin
     case(c$app_arg_1)
-      7'b0000011 : result_9 = 1'b1;
-      7'b0010011 : result_9 = 1'b1;
-      7'b0110011 : result_9 = 1'b1;
-      7'b0010111 : result_9 = 1'b1;
-      7'b0110111 : result_9 = 1'b1;
-      7'b1101111 : result_9 = 1'b1;
-      default : result_9 = c$app_arg_1 == 7'b1100111;
-    endcase
-  end
-
-  assign c$app_arg_1 = pipeline_lvl54_instr_2[6 : 0];
-
-  assign c$$j_case_alt = result_10 ? 2'd1 : 2'd2;
-
-  always @(*) begin
-    case(c$app_arg_2)
       7'b0000011 : result_10 = 1'b1;
       7'b0010011 : result_10 = 1'b1;
       7'b0110011 : result_10 = 1'b1;
       7'b0010111 : result_10 = 1'b1;
       7'b0110111 : result_10 = 1'b1;
       7'b1101111 : result_10 = 1'b1;
-      default : result_10 = c$app_arg_2 == 7'b1100111;
+      default : result_10 = c$app_arg_1 == 7'b1100111;
+    endcase
+  end
+
+  assign c$app_arg_1 = pipeline_lvl54_instr_2[6 : 0];
+
+  assign c$$j_case_alt = result_11 ? 2'd1 : 2'd2;
+
+  always @(*) begin
+    case(c$app_arg_2)
+      7'b0000011 : result_11 = 1'b1;
+      7'b0010011 : result_11 = 1'b1;
+      7'b0110011 : result_11 = 1'b1;
+      7'b0010111 : result_11 = 1'b1;
+      7'b0110111 : result_11 = 1'b1;
+      7'b1101111 : result_11 = 1'b1;
+      default : result_11 = c$app_arg_2 == 7'b1100111;
     endcase
   end
 
@@ -649,8 +656,8 @@ module clash_riscv
 
   always @(*) begin
     case(rs2Addr_1)
-      5'd0 : result_11 = 2'd2;
-      default : result_11 = result_8;
+      5'd0 : result_12 = 2'd2;
+      default : result_12 = result_9;
     endcase
   end
 
@@ -660,9 +667,9 @@ module clash_riscv
 
   always @(*) begin
     case(destRegSource_4)
-      2'b00 : result_12 = pipeline_lvl54_execRes_4;
-      2'b01 : result_12 = pipeline_lvl54_memReadData_4;
-      default : result_12 = {32 {1'bx}};
+      2'b00 : result_13 = pipeline_lvl54_execRes_4;
+      2'b01 : result_13 = pipeline_lvl54_memReadData_4;
+      default : result_13 = {32 {1'bx}};
     endcase
   end
 
@@ -681,12 +688,12 @@ module clash_riscv
     if ( reset) begin
       destRegSource_4 <= 2'd0;
     end else   begin
-      destRegSource_4 <= result_13;
+      destRegSource_4 <= result_14;
     end
   end
   // register end
 
-  assign c$case_alt_4 = c$case_scrut ? 2'd2 : 2'd0;
+  assign c$case_alt_5 = c$case_scrut ? 2'd2 : 2'd0;
 
   assign c$case_scrut_selection_res = pipeline_lvl54_instr_3[31 : 28];
 
@@ -697,18 +704,18 @@ module clash_riscv
     endcase
   end
 
-  assign result_13_selection_res = pipeline_lvl54_instr_3[6 : 0];
+  assign result_14_selection_res = pipeline_lvl54_instr_3[6 : 0];
 
   always @(*) begin
-    case(result_13_selection_res)
-      7'b0010011 : result_13 = 2'd0;
-      7'b0110011 : result_13 = 2'd0;
-      7'b0010111 : result_13 = 2'd0;
-      7'b0000011 : result_13 = 2'd1;
-      7'b0110111 : result_13 = 2'd0;
-      7'b1101111 : result_13 = 2'd0;
-      7'b1100111 : result_13 = 2'd0;
-      default : result_13 = c$case_alt_4;
+    case(result_14_selection_res)
+      7'b0010011 : result_14 = 2'd0;
+      7'b0110011 : result_14 = 2'd0;
+      7'b0010111 : result_14 = 2'd0;
+      7'b0000011 : result_14 = 2'd1;
+      7'b0110111 : result_14 = 2'd0;
+      7'b1101111 : result_14 = 2'd0;
+      7'b1100111 : result_14 = 2'd0;
+      default : result_14 = c$case_alt_5;
     endcase
   end
 
@@ -717,16 +724,16 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl54_memReadData_4 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_memReadData_4 <= result_18;
+      pipeline_lvl54_memReadData_4 <= result_19;
     end
   end
   // register end
 
   assign \unsigned  = bv_1 == 1'b1;
 
-  assign c$s = ($signed(result_15));
+  assign c$s = ($signed(result_16));
 
-  assign result_14 = \unsigned  ? ({16'b0000000000000000,result_15}) : ($unsigned(($signed({{(32-16) {c$s[16-1]}},c$s}))));
+  assign result_15 = \unsigned  ? ({16'b0000000000000000,result_16}) : ($unsigned(($signed({{(32-16) {c$s[16-1]}},c$s}))));
 
   assign wild1_0 = $signed(c$wild1_app_arg_0);
 
@@ -738,7 +745,7 @@ module clash_riscv
     assign vecArray_0[(2-1)-i_0] = c$karg_app_arg[i_0*16+:16];
   end
   endgenerate
-  assign result_15 = vecArray_0[(wild1_0)];
+  assign result_16 = vecArray_0[(wild1_0)];
   // index end
 
   // reverse begin
@@ -771,9 +778,9 @@ module clash_riscv
 
   assign c$wild1_app_arg_0 = $unsigned({{(64-1) {1'b0}},c$bv_0});
 
-  assign c$s_0 = ($signed(result_17));
+  assign c$s_0 = ($signed(result_18));
 
-  assign result_16 = \unsigned  ? ({24'b000000000000000000000000,result_17}) : ($unsigned(($signed({{(32-8) {c$s_0[8-1]}},c$s_0}))));
+  assign result_17 = \unsigned  ? ({24'b000000000000000000000000,result_18}) : ($unsigned(($signed({{(32-8) {c$s_0[8-1]}},c$s_0}))));
 
   assign wild1_1 = $signed(c$wild1_app_arg_1);
 
@@ -785,7 +792,7 @@ module clash_riscv
     assign vecArray_1[(4-1)-i_3] = c$karg_app_arg_1[i_3*8+:8];
   end
   endgenerate
-  assign result_17 = vecArray_1[(wild1_1)];
+  assign result_18 = vecArray_1[(wild1_1)];
   // index end
 
   // reverse begin
@@ -818,9 +825,9 @@ module clash_riscv
 
   always @(*) begin
     case(c$memReadData_3_app_arg_0)
-      2'b00 : result_18 = result_16;
-      2'b01 : result_18 = result_14;
-      default : result_18 = fromDataMem[32:1];
+      2'b00 : result_19 = result_17;
+      2'b01 : result_19 = result_15;
+      default : result_19 = fromDataMem[32:1];
     endcase
   end
 
@@ -831,24 +838,24 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl54_execRes_3 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_execRes_3 <= result_19;
+      pipeline_lvl54_execRes_3 <= result_20;
     end
   end
   // register end
 
-  assign result_19 = pipeline_lvl53_b ? pipeline_lvl54_t : result_21[31:0];
+  assign result_20 = pipeline_lvl53_b ? pipeline_lvl54_t : result_22[31:0];
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl54_t_register
     if ( reset) begin
       pipeline_lvl54_t <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_t <= result_20;
+      pipeline_lvl54_t <= result_21;
     end
   end
   // register end
 
-  assign result_20 = c$b_app_arg ? t_0 : f2;
+  assign result_21 = c$b_app_arg ? t_0 : f2;
 
   assign t_0 = {(instr_1[31 : 12]),12'b000000000000};
 
@@ -866,30 +873,30 @@ module clash_riscv
 
   assign c$b_app_arg = c$b_app_arg_1 == 7'b0110111;
 
-  assign result_21 = {addSub,result_22};
+  assign result_22 = {addSub,result_23};
 
   always @(*) begin
-    case(result_38)
-      4'b0000 : result_22 = addSub;
-      4'b0001 : result_22 = c$case_alt_7;
-      4'b0010 : result_22 = c$case_alt_6;
-      4'b0011 : result_22 = result_43 & result_5;
-      4'b0100 : result_22 = result_43 | result_5;
-      4'b0101 : result_22 = result_43 ^ result_5;
-      4'b0110 : result_22 = result_43 << result_23;
-      4'b0111 : result_22 = c$case_alt_5;
-      4'b1000 : result_22 = x_4;
-      4'b1001 : result_22 = x_3;
-      4'b1010 : result_22 = x_2;
-      4'b1011 : result_22 = x_1;
-      4'b1100 : result_22 = result_29[63:32];
-      4'b1101 : result_22 = result_28[63:32];
-      4'b1110 : result_22 = result_29[31:0];
-      default : result_22 = result_28[31:0];
+    case(result_39)
+      4'b0000 : result_23 = addSub;
+      4'b0001 : result_23 = c$case_alt_8;
+      4'b0010 : result_23 = c$case_alt_7;
+      4'b0011 : result_23 = result_44 & result_6;
+      4'b0100 : result_23 = result_44 | result_6;
+      4'b0101 : result_23 = result_44 ^ result_6;
+      4'b0110 : result_23 = result_44 << result_24;
+      4'b0111 : result_23 = c$case_alt_6;
+      4'b1000 : result_23 = x_4;
+      4'b1001 : result_23 = x_3;
+      4'b1010 : result_23 = x_2;
+      4'b1011 : result_23 = x_1;
+      4'b1100 : result_23 = result_30[63:32];
+      4'b1101 : result_23 = result_29[63:32];
+      4'b1110 : result_23 = result_30[31:0];
+      default : result_23 = result_29[31:0];
     endcase
   end
 
-  assign addSub = result_42 ? (result_43 - result_5) : (result_43 + result_5);
+  assign addSub = result_43 ? (result_44 - result_6) : (result_44 + result_6);
 
   assign x_1 = c$x_app_arg_1[63 : 32];
 
@@ -903,11 +910,11 @@ module clash_riscv
 
   assign x_4 = c$x_app_arg_1[31 : 0];
 
-  assign c$case_alt_5 = result_42 ? ($unsigned((c$app_arg_4 >>> result_23))) : (result_43 >> result_23);
+  assign c$case_alt_6 = result_43 ? ($unsigned((c$app_arg_4 >>> result_24))) : (result_44 >> result_24);
 
-  assign c$case_alt_6 = (\c$times#Out_app_arg_0  < \c$times#Out_app_arg ) ? 32'b00000000000000000000000000000001 : 32'b00000000000000000000000000000000;
+  assign c$case_alt_7 = (\c$times#Out_app_arg_0  < \c$times#Out_app_arg ) ? 32'b00000000000000000000000000000001 : 32'b00000000000000000000000000000000;
 
-  assign c$case_alt_7 = (c$app_arg_4 < c$app_arg_3) ? 32'b00000000000000000000000000000001 : 32'b00000000000000000000000000000000;
+  assign c$case_alt_8 = (c$app_arg_4 < c$app_arg_3) ? 32'b00000000000000000000000000000001 : 32'b00000000000000000000000000000000;
 
   assign c$x_app_arg = $signed(({1'b0,($unsigned(c$app_arg_3))}));
 
@@ -915,25 +922,25 @@ module clash_riscv
 
   assign c$x_app_arg_1 = \c$times#Out ;
 
-  assign c$app_arg_3 = $signed(result_5);
+  assign c$app_arg_3 = $signed(result_6);
 
-  assign c$app_arg_4 = $signed(result_43);
+  assign c$app_arg_4 = $signed(result_44);
 
-  assign result_23 = wild;
+  assign result_24 = wild;
 
   assign wild = $signed(c$wild_app_arg);
 
   assign c$wild_app_arg = $unsigned(x_5[0+:64]);
 
-  assign x_5 = {59'b00000000000000000000000000000000000000000000000000000000000,(result_5[4 : 0])};
+  assign x_5 = {59'b00000000000000000000000000000000000000000000000000000000000,(result_6[4 : 0])};
 
   assign \c$times#Out  = \c$times#Out_app_arg_0  * \c$times#Out_app_arg ;
 
-  assign \c$times#Out_app_arg  = result_5;
+  assign \c$times#Out_app_arg  = result_6;
 
-  assign \c$times#Out_app_arg_0  = result_43;
+  assign \c$times#Out_app_arg_0  = result_44;
 
-  assign c$vec_1 = (result_5);
+  assign c$vec_1 = (result_6);
 
   // map begin
   genvar i_6;
@@ -950,7 +957,7 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign c$vec_2 = (result_43);
+  assign c$vec_2 = (result_44);
 
   // map begin
   genvar i_7;
@@ -967,7 +974,7 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign result_24 = {c$app_arg_5
+  assign result_25 = {c$app_arg_5
                      ,{32 {1'b0}}
                      ,{32 {1'b0}}};
 
@@ -1025,10 +1032,10 @@ module clash_riscv
     wire  zipWith_in2;
     assign zipWith_in2 = shiftedP[i_8*1+:1];
     wire [1:0] c$n;
-    wire [1:0] c$case_alt_12;
-  assign c$case_alt_12 = (zipWith_in1 <= zipWith_in2) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_13;
+  assign c$case_alt_13 = (zipWith_in1 <= zipWith_in2) ? 2'd0 : 2'd2;
 
-  assign c$n = (zipWith_in1 == zipWith_in2) ? 2'd1 : c$case_alt_12;
+  assign c$n = (zipWith_in1 == zipWith_in2) ? 2'd1 : c$case_alt_13;
 
 
     assign c$app_arg_15[i_8*2+:2] = c$n;
@@ -1111,9 +1118,9 @@ module clash_riscv
   assign c$case_scrut_0 = intermediate[0];
   // foldr end
 
-  assign \c$iterateI_ho1_0_res_sel_alt  = ({result_24[31:0],1'b0});
+  assign \c$iterateI_ho1_0_res_sel_alt  = ({result_25[31:0],1'b0});
 
-  assign \c$iterateI_ho1_0_res_sel_alt_0  = ({result_24[31:0],1'b1});
+  assign \c$iterateI_ho1_0_res_sel_alt_0  = ({result_25[31:0],1'b1});
 
   always @(*) begin
     case(c$case_scrut_0)
@@ -1126,13 +1133,13 @@ module clash_riscv
     endcase
   end
 
-  assign c$vec_4 = result_24[95:64];
+  assign c$vec_4 = result_25[95:64];
 
-  assign shiftedP_projection = ({result_24[63:32],c$vec_4[32-1 -: 1]});
+  assign shiftedP_projection = ({result_25[63:32],c$vec_4[32-1 -: 1]});
 
   assign shiftedP = shiftedP_projection[31:0];
 
-  assign shiftedA_projection = ({result_24[95:64],1'b0});
+  assign shiftedA_projection = ({result_25[95:64],1'b0});
 
   assign shiftedA = shiftedA_projection[31:0];
 
@@ -1160,10 +1167,10 @@ module clash_riscv
     wire  zipWith_in2_0;
     assign zipWith_in2_0 = shiftedP_0[i_13*1+:1];
     wire [1:0] c$n_0;
-    wire [1:0] c$case_alt_13;
-  assign c$case_alt_13 = (zipWith_in1_0 <= zipWith_in2_0) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_14;
+  assign c$case_alt_14 = (zipWith_in1_0 <= zipWith_in2_0) ? 2'd0 : 2'd2;
 
-  assign c$n_0 = (zipWith_in1_0 == zipWith_in2_0) ? 2'd1 : c$case_alt_13;
+  assign c$n_0 = (zipWith_in1_0 == zipWith_in2_0) ? 2'd1 : c$case_alt_14;
 
 
     assign c$app_arg_19[i_13*2+:2] = c$n_0;
@@ -1295,10 +1302,10 @@ module clash_riscv
     wire  zipWith_in2_1;
     assign zipWith_in2_1 = shiftedP_1[i_18*1+:1];
     wire [1:0] c$n_1;
-    wire [1:0] c$case_alt_14;
-  assign c$case_alt_14 = (zipWith_in1_1 <= zipWith_in2_1) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_15;
+  assign c$case_alt_15 = (zipWith_in1_1 <= zipWith_in2_1) ? 2'd0 : 2'd2;
 
-  assign c$n_1 = (zipWith_in1_1 == zipWith_in2_1) ? 2'd1 : c$case_alt_14;
+  assign c$n_1 = (zipWith_in1_1 == zipWith_in2_1) ? 2'd1 : c$case_alt_15;
 
 
     assign c$app_arg_23[i_18*2+:2] = c$n_1;
@@ -1430,10 +1437,10 @@ module clash_riscv
     wire  zipWith_in2_2;
     assign zipWith_in2_2 = shiftedP_2[i_23*1+:1];
     wire [1:0] c$n_2;
-    wire [1:0] c$case_alt_15;
-  assign c$case_alt_15 = (zipWith_in1_2 <= zipWith_in2_2) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_16;
+  assign c$case_alt_16 = (zipWith_in1_2 <= zipWith_in2_2) ? 2'd0 : 2'd2;
 
-  assign c$n_2 = (zipWith_in1_2 == zipWith_in2_2) ? 2'd1 : c$case_alt_15;
+  assign c$n_2 = (zipWith_in1_2 == zipWith_in2_2) ? 2'd1 : c$case_alt_16;
 
 
     assign c$app_arg_27[i_23*2+:2] = c$n_2;
@@ -1565,10 +1572,10 @@ module clash_riscv
     wire  zipWith_in2_3;
     assign zipWith_in2_3 = shiftedP_3[i_28*1+:1];
     wire [1:0] c$n_3;
-    wire [1:0] c$case_alt_16;
-  assign c$case_alt_16 = (zipWith_in1_3 <= zipWith_in2_3) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_17;
+  assign c$case_alt_17 = (zipWith_in1_3 <= zipWith_in2_3) ? 2'd0 : 2'd2;
 
-  assign c$n_3 = (zipWith_in1_3 == zipWith_in2_3) ? 2'd1 : c$case_alt_16;
+  assign c$n_3 = (zipWith_in1_3 == zipWith_in2_3) ? 2'd1 : c$case_alt_17;
 
 
     assign c$app_arg_31[i_28*2+:2] = c$n_3;
@@ -1700,10 +1707,10 @@ module clash_riscv
     wire  zipWith_in2_4;
     assign zipWith_in2_4 = shiftedP_4[i_33*1+:1];
     wire [1:0] c$n_4;
-    wire [1:0] c$case_alt_17;
-  assign c$case_alt_17 = (zipWith_in1_4 <= zipWith_in2_4) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_18;
+  assign c$case_alt_18 = (zipWith_in1_4 <= zipWith_in2_4) ? 2'd0 : 2'd2;
 
-  assign c$n_4 = (zipWith_in1_4 == zipWith_in2_4) ? 2'd1 : c$case_alt_17;
+  assign c$n_4 = (zipWith_in1_4 == zipWith_in2_4) ? 2'd1 : c$case_alt_18;
 
 
     assign c$app_arg_35[i_33*2+:2] = c$n_4;
@@ -1835,10 +1842,10 @@ module clash_riscv
     wire  zipWith_in2_5;
     assign zipWith_in2_5 = shiftedP_5[i_38*1+:1];
     wire [1:0] c$n_5;
-    wire [1:0] c$case_alt_18;
-  assign c$case_alt_18 = (zipWith_in1_5 <= zipWith_in2_5) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_19;
+  assign c$case_alt_19 = (zipWith_in1_5 <= zipWith_in2_5) ? 2'd0 : 2'd2;
 
-  assign c$n_5 = (zipWith_in1_5 == zipWith_in2_5) ? 2'd1 : c$case_alt_18;
+  assign c$n_5 = (zipWith_in1_5 == zipWith_in2_5) ? 2'd1 : c$case_alt_19;
 
 
     assign c$app_arg_39[i_38*2+:2] = c$n_5;
@@ -1970,10 +1977,10 @@ module clash_riscv
     wire  zipWith_in2_6;
     assign zipWith_in2_6 = shiftedP_6[i_43*1+:1];
     wire [1:0] c$n_6;
-    wire [1:0] c$case_alt_19;
-  assign c$case_alt_19 = (zipWith_in1_6 <= zipWith_in2_6) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_20;
+  assign c$case_alt_20 = (zipWith_in1_6 <= zipWith_in2_6) ? 2'd0 : 2'd2;
 
-  assign c$n_6 = (zipWith_in1_6 == zipWith_in2_6) ? 2'd1 : c$case_alt_19;
+  assign c$n_6 = (zipWith_in1_6 == zipWith_in2_6) ? 2'd1 : c$case_alt_20;
 
 
     assign c$app_arg_43[i_43*2+:2] = c$n_6;
@@ -2105,10 +2112,10 @@ module clash_riscv
     wire  zipWith_in2_7;
     assign zipWith_in2_7 = shiftedP_7[i_48*1+:1];
     wire [1:0] c$n_7;
-    wire [1:0] c$case_alt_20;
-  assign c$case_alt_20 = (zipWith_in1_7 <= zipWith_in2_7) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_21;
+  assign c$case_alt_21 = (zipWith_in1_7 <= zipWith_in2_7) ? 2'd0 : 2'd2;
 
-  assign c$n_7 = (zipWith_in1_7 == zipWith_in2_7) ? 2'd1 : c$case_alt_20;
+  assign c$n_7 = (zipWith_in1_7 == zipWith_in2_7) ? 2'd1 : c$case_alt_21;
 
 
     assign c$app_arg_47[i_48*2+:2] = c$n_7;
@@ -2240,10 +2247,10 @@ module clash_riscv
     wire  zipWith_in2_8;
     assign zipWith_in2_8 = shiftedP_8[i_53*1+:1];
     wire [1:0] c$n_8;
-    wire [1:0] c$case_alt_21;
-  assign c$case_alt_21 = (zipWith_in1_8 <= zipWith_in2_8) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_22;
+  assign c$case_alt_22 = (zipWith_in1_8 <= zipWith_in2_8) ? 2'd0 : 2'd2;
 
-  assign c$n_8 = (zipWith_in1_8 == zipWith_in2_8) ? 2'd1 : c$case_alt_21;
+  assign c$n_8 = (zipWith_in1_8 == zipWith_in2_8) ? 2'd1 : c$case_alt_22;
 
 
     assign c$app_arg_51[i_53*2+:2] = c$n_8;
@@ -2375,10 +2382,10 @@ module clash_riscv
     wire  zipWith_in2_9;
     assign zipWith_in2_9 = shiftedP_9[i_58*1+:1];
     wire [1:0] c$n_9;
-    wire [1:0] c$case_alt_22;
-  assign c$case_alt_22 = (zipWith_in1_9 <= zipWith_in2_9) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_23;
+  assign c$case_alt_23 = (zipWith_in1_9 <= zipWith_in2_9) ? 2'd0 : 2'd2;
 
-  assign c$n_9 = (zipWith_in1_9 == zipWith_in2_9) ? 2'd1 : c$case_alt_22;
+  assign c$n_9 = (zipWith_in1_9 == zipWith_in2_9) ? 2'd1 : c$case_alt_23;
 
 
     assign c$app_arg_55[i_58*2+:2] = c$n_9;
@@ -2510,10 +2517,10 @@ module clash_riscv
     wire  zipWith_in2_10;
     assign zipWith_in2_10 = shiftedP_10[i_63*1+:1];
     wire [1:0] c$n_10;
-    wire [1:0] c$case_alt_23;
-  assign c$case_alt_23 = (zipWith_in1_10 <= zipWith_in2_10) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_24;
+  assign c$case_alt_24 = (zipWith_in1_10 <= zipWith_in2_10) ? 2'd0 : 2'd2;
 
-  assign c$n_10 = (zipWith_in1_10 == zipWith_in2_10) ? 2'd1 : c$case_alt_23;
+  assign c$n_10 = (zipWith_in1_10 == zipWith_in2_10) ? 2'd1 : c$case_alt_24;
 
 
     assign c$app_arg_59[i_63*2+:2] = c$n_10;
@@ -2645,10 +2652,10 @@ module clash_riscv
     wire  zipWith_in2_11;
     assign zipWith_in2_11 = shiftedP_11[i_68*1+:1];
     wire [1:0] c$n_11;
-    wire [1:0] c$case_alt_24;
-  assign c$case_alt_24 = (zipWith_in1_11 <= zipWith_in2_11) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_25;
+  assign c$case_alt_25 = (zipWith_in1_11 <= zipWith_in2_11) ? 2'd0 : 2'd2;
 
-  assign c$n_11 = (zipWith_in1_11 == zipWith_in2_11) ? 2'd1 : c$case_alt_24;
+  assign c$n_11 = (zipWith_in1_11 == zipWith_in2_11) ? 2'd1 : c$case_alt_25;
 
 
     assign c$app_arg_63[i_68*2+:2] = c$n_11;
@@ -2780,10 +2787,10 @@ module clash_riscv
     wire  zipWith_in2_12;
     assign zipWith_in2_12 = shiftedP_12[i_73*1+:1];
     wire [1:0] c$n_12;
-    wire [1:0] c$case_alt_25;
-  assign c$case_alt_25 = (zipWith_in1_12 <= zipWith_in2_12) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_26;
+  assign c$case_alt_26 = (zipWith_in1_12 <= zipWith_in2_12) ? 2'd0 : 2'd2;
 
-  assign c$n_12 = (zipWith_in1_12 == zipWith_in2_12) ? 2'd1 : c$case_alt_25;
+  assign c$n_12 = (zipWith_in1_12 == zipWith_in2_12) ? 2'd1 : c$case_alt_26;
 
 
     assign c$app_arg_67[i_73*2+:2] = c$n_12;
@@ -2915,10 +2922,10 @@ module clash_riscv
     wire  zipWith_in2_13;
     assign zipWith_in2_13 = shiftedP_13[i_78*1+:1];
     wire [1:0] c$n_13;
-    wire [1:0] c$case_alt_26;
-  assign c$case_alt_26 = (zipWith_in1_13 <= zipWith_in2_13) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_27;
+  assign c$case_alt_27 = (zipWith_in1_13 <= zipWith_in2_13) ? 2'd0 : 2'd2;
 
-  assign c$n_13 = (zipWith_in1_13 == zipWith_in2_13) ? 2'd1 : c$case_alt_26;
+  assign c$n_13 = (zipWith_in1_13 == zipWith_in2_13) ? 2'd1 : c$case_alt_27;
 
 
     assign c$app_arg_71[i_78*2+:2] = c$n_13;
@@ -3050,10 +3057,10 @@ module clash_riscv
     wire  zipWith_in2_14;
     assign zipWith_in2_14 = shiftedP_14[i_83*1+:1];
     wire [1:0] c$n_14;
-    wire [1:0] c$case_alt_27;
-  assign c$case_alt_27 = (zipWith_in1_14 <= zipWith_in2_14) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_28;
+  assign c$case_alt_28 = (zipWith_in1_14 <= zipWith_in2_14) ? 2'd0 : 2'd2;
 
-  assign c$n_14 = (zipWith_in1_14 == zipWith_in2_14) ? 2'd1 : c$case_alt_27;
+  assign c$n_14 = (zipWith_in1_14 == zipWith_in2_14) ? 2'd1 : c$case_alt_28;
 
 
     assign c$app_arg_75[i_83*2+:2] = c$n_14;
@@ -3185,10 +3192,10 @@ module clash_riscv
     wire  zipWith_in2_15;
     assign zipWith_in2_15 = shiftedP_15[i_88*1+:1];
     wire [1:0] c$n_15;
-    wire [1:0] c$case_alt_28;
-  assign c$case_alt_28 = (zipWith_in1_15 <= zipWith_in2_15) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_29;
+  assign c$case_alt_29 = (zipWith_in1_15 <= zipWith_in2_15) ? 2'd0 : 2'd2;
 
-  assign c$n_15 = (zipWith_in1_15 == zipWith_in2_15) ? 2'd1 : c$case_alt_28;
+  assign c$n_15 = (zipWith_in1_15 == zipWith_in2_15) ? 2'd1 : c$case_alt_29;
 
 
     assign c$app_arg_79[i_88*2+:2] = c$n_15;
@@ -3320,10 +3327,10 @@ module clash_riscv
     wire  zipWith_in2_16;
     assign zipWith_in2_16 = shiftedP_16[i_93*1+:1];
     wire [1:0] c$n_16;
-    wire [1:0] c$case_alt_29;
-  assign c$case_alt_29 = (zipWith_in1_16 <= zipWith_in2_16) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_30;
+  assign c$case_alt_30 = (zipWith_in1_16 <= zipWith_in2_16) ? 2'd0 : 2'd2;
 
-  assign c$n_16 = (zipWith_in1_16 == zipWith_in2_16) ? 2'd1 : c$case_alt_29;
+  assign c$n_16 = (zipWith_in1_16 == zipWith_in2_16) ? 2'd1 : c$case_alt_30;
 
 
     assign c$app_arg_83[i_93*2+:2] = c$n_16;
@@ -3455,10 +3462,10 @@ module clash_riscv
     wire  zipWith_in2_17;
     assign zipWith_in2_17 = shiftedP_17[i_98*1+:1];
     wire [1:0] c$n_17;
-    wire [1:0] c$case_alt_30;
-  assign c$case_alt_30 = (zipWith_in1_17 <= zipWith_in2_17) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_31;
+  assign c$case_alt_31 = (zipWith_in1_17 <= zipWith_in2_17) ? 2'd0 : 2'd2;
 
-  assign c$n_17 = (zipWith_in1_17 == zipWith_in2_17) ? 2'd1 : c$case_alt_30;
+  assign c$n_17 = (zipWith_in1_17 == zipWith_in2_17) ? 2'd1 : c$case_alt_31;
 
 
     assign c$app_arg_87[i_98*2+:2] = c$n_17;
@@ -3590,10 +3597,10 @@ module clash_riscv
     wire  zipWith_in2_18;
     assign zipWith_in2_18 = shiftedP_18[i_103*1+:1];
     wire [1:0] c$n_18;
-    wire [1:0] c$case_alt_31;
-  assign c$case_alt_31 = (zipWith_in1_18 <= zipWith_in2_18) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_32;
+  assign c$case_alt_32 = (zipWith_in1_18 <= zipWith_in2_18) ? 2'd0 : 2'd2;
 
-  assign c$n_18 = (zipWith_in1_18 == zipWith_in2_18) ? 2'd1 : c$case_alt_31;
+  assign c$n_18 = (zipWith_in1_18 == zipWith_in2_18) ? 2'd1 : c$case_alt_32;
 
 
     assign c$app_arg_91[i_103*2+:2] = c$n_18;
@@ -3725,10 +3732,10 @@ module clash_riscv
     wire  zipWith_in2_19;
     assign zipWith_in2_19 = shiftedP_19[i_108*1+:1];
     wire [1:0] c$n_19;
-    wire [1:0] c$case_alt_32;
-  assign c$case_alt_32 = (zipWith_in1_19 <= zipWith_in2_19) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_33;
+  assign c$case_alt_33 = (zipWith_in1_19 <= zipWith_in2_19) ? 2'd0 : 2'd2;
 
-  assign c$n_19 = (zipWith_in1_19 == zipWith_in2_19) ? 2'd1 : c$case_alt_32;
+  assign c$n_19 = (zipWith_in1_19 == zipWith_in2_19) ? 2'd1 : c$case_alt_33;
 
 
     assign c$app_arg_95[i_108*2+:2] = c$n_19;
@@ -3860,10 +3867,10 @@ module clash_riscv
     wire  zipWith_in2_20;
     assign zipWith_in2_20 = shiftedP_20[i_113*1+:1];
     wire [1:0] c$n_20;
-    wire [1:0] c$case_alt_33;
-  assign c$case_alt_33 = (zipWith_in1_20 <= zipWith_in2_20) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_34;
+  assign c$case_alt_34 = (zipWith_in1_20 <= zipWith_in2_20) ? 2'd0 : 2'd2;
 
-  assign c$n_20 = (zipWith_in1_20 == zipWith_in2_20) ? 2'd1 : c$case_alt_33;
+  assign c$n_20 = (zipWith_in1_20 == zipWith_in2_20) ? 2'd1 : c$case_alt_34;
 
 
     assign c$app_arg_99[i_113*2+:2] = c$n_20;
@@ -3995,10 +4002,10 @@ module clash_riscv
     wire  zipWith_in2_21;
     assign zipWith_in2_21 = shiftedP_21[i_118*1+:1];
     wire [1:0] c$n_21;
-    wire [1:0] c$case_alt_34;
-  assign c$case_alt_34 = (zipWith_in1_21 <= zipWith_in2_21) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_35;
+  assign c$case_alt_35 = (zipWith_in1_21 <= zipWith_in2_21) ? 2'd0 : 2'd2;
 
-  assign c$n_21 = (zipWith_in1_21 == zipWith_in2_21) ? 2'd1 : c$case_alt_34;
+  assign c$n_21 = (zipWith_in1_21 == zipWith_in2_21) ? 2'd1 : c$case_alt_35;
 
 
     assign c$app_arg_103[i_118*2+:2] = c$n_21;
@@ -4130,10 +4137,10 @@ module clash_riscv
     wire  zipWith_in2_22;
     assign zipWith_in2_22 = shiftedP_22[i_123*1+:1];
     wire [1:0] c$n_22;
-    wire [1:0] c$case_alt_35;
-  assign c$case_alt_35 = (zipWith_in1_22 <= zipWith_in2_22) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_36;
+  assign c$case_alt_36 = (zipWith_in1_22 <= zipWith_in2_22) ? 2'd0 : 2'd2;
 
-  assign c$n_22 = (zipWith_in1_22 == zipWith_in2_22) ? 2'd1 : c$case_alt_35;
+  assign c$n_22 = (zipWith_in1_22 == zipWith_in2_22) ? 2'd1 : c$case_alt_36;
 
 
     assign c$app_arg_107[i_123*2+:2] = c$n_22;
@@ -4265,10 +4272,10 @@ module clash_riscv
     wire  zipWith_in2_23;
     assign zipWith_in2_23 = shiftedP_23[i_128*1+:1];
     wire [1:0] c$n_23;
-    wire [1:0] c$case_alt_36;
-  assign c$case_alt_36 = (zipWith_in1_23 <= zipWith_in2_23) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_37;
+  assign c$case_alt_37 = (zipWith_in1_23 <= zipWith_in2_23) ? 2'd0 : 2'd2;
 
-  assign c$n_23 = (zipWith_in1_23 == zipWith_in2_23) ? 2'd1 : c$case_alt_36;
+  assign c$n_23 = (zipWith_in1_23 == zipWith_in2_23) ? 2'd1 : c$case_alt_37;
 
 
     assign c$app_arg_111[i_128*2+:2] = c$n_23;
@@ -4400,10 +4407,10 @@ module clash_riscv
     wire  zipWith_in2_24;
     assign zipWith_in2_24 = shiftedP_24[i_133*1+:1];
     wire [1:0] c$n_24;
-    wire [1:0] c$case_alt_37;
-  assign c$case_alt_37 = (zipWith_in1_24 <= zipWith_in2_24) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_38;
+  assign c$case_alt_38 = (zipWith_in1_24 <= zipWith_in2_24) ? 2'd0 : 2'd2;
 
-  assign c$n_24 = (zipWith_in1_24 == zipWith_in2_24) ? 2'd1 : c$case_alt_37;
+  assign c$n_24 = (zipWith_in1_24 == zipWith_in2_24) ? 2'd1 : c$case_alt_38;
 
 
     assign c$app_arg_115[i_133*2+:2] = c$n_24;
@@ -4535,10 +4542,10 @@ module clash_riscv
     wire  zipWith_in2_25;
     assign zipWith_in2_25 = shiftedP_25[i_138*1+:1];
     wire [1:0] c$n_25;
-    wire [1:0] c$case_alt_38;
-  assign c$case_alt_38 = (zipWith_in1_25 <= zipWith_in2_25) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_39;
+  assign c$case_alt_39 = (zipWith_in1_25 <= zipWith_in2_25) ? 2'd0 : 2'd2;
 
-  assign c$n_25 = (zipWith_in1_25 == zipWith_in2_25) ? 2'd1 : c$case_alt_38;
+  assign c$n_25 = (zipWith_in1_25 == zipWith_in2_25) ? 2'd1 : c$case_alt_39;
 
 
     assign c$app_arg_119[i_138*2+:2] = c$n_25;
@@ -4670,10 +4677,10 @@ module clash_riscv
     wire  zipWith_in2_26;
     assign zipWith_in2_26 = shiftedP_26[i_143*1+:1];
     wire [1:0] c$n_26;
-    wire [1:0] c$case_alt_39;
-  assign c$case_alt_39 = (zipWith_in1_26 <= zipWith_in2_26) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_40;
+  assign c$case_alt_40 = (zipWith_in1_26 <= zipWith_in2_26) ? 2'd0 : 2'd2;
 
-  assign c$n_26 = (zipWith_in1_26 == zipWith_in2_26) ? 2'd1 : c$case_alt_39;
+  assign c$n_26 = (zipWith_in1_26 == zipWith_in2_26) ? 2'd1 : c$case_alt_40;
 
 
     assign c$app_arg_123[i_143*2+:2] = c$n_26;
@@ -4805,10 +4812,10 @@ module clash_riscv
     wire  zipWith_in2_27;
     assign zipWith_in2_27 = shiftedP_27[i_148*1+:1];
     wire [1:0] c$n_27;
-    wire [1:0] c$case_alt_40;
-  assign c$case_alt_40 = (zipWith_in1_27 <= zipWith_in2_27) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_41;
+  assign c$case_alt_41 = (zipWith_in1_27 <= zipWith_in2_27) ? 2'd0 : 2'd2;
 
-  assign c$n_27 = (zipWith_in1_27 == zipWith_in2_27) ? 2'd1 : c$case_alt_40;
+  assign c$n_27 = (zipWith_in1_27 == zipWith_in2_27) ? 2'd1 : c$case_alt_41;
 
 
     assign c$app_arg_127[i_148*2+:2] = c$n_27;
@@ -4940,10 +4947,10 @@ module clash_riscv
     wire  zipWith_in2_28;
     assign zipWith_in2_28 = shiftedP_28[i_153*1+:1];
     wire [1:0] c$n_28;
-    wire [1:0] c$case_alt_41;
-  assign c$case_alt_41 = (zipWith_in1_28 <= zipWith_in2_28) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_42;
+  assign c$case_alt_42 = (zipWith_in1_28 <= zipWith_in2_28) ? 2'd0 : 2'd2;
 
-  assign c$n_28 = (zipWith_in1_28 == zipWith_in2_28) ? 2'd1 : c$case_alt_41;
+  assign c$n_28 = (zipWith_in1_28 == zipWith_in2_28) ? 2'd1 : c$case_alt_42;
 
 
     assign c$app_arg_131[i_153*2+:2] = c$n_28;
@@ -5075,10 +5082,10 @@ module clash_riscv
     wire  zipWith_in2_29;
     assign zipWith_in2_29 = shiftedP_29[i_158*1+:1];
     wire [1:0] c$n_29;
-    wire [1:0] c$case_alt_42;
-  assign c$case_alt_42 = (zipWith_in1_29 <= zipWith_in2_29) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_43;
+  assign c$case_alt_43 = (zipWith_in1_29 <= zipWith_in2_29) ? 2'd0 : 2'd2;
 
-  assign c$n_29 = (zipWith_in1_29 == zipWith_in2_29) ? 2'd1 : c$case_alt_42;
+  assign c$n_29 = (zipWith_in1_29 == zipWith_in2_29) ? 2'd1 : c$case_alt_43;
 
 
     assign c$app_arg_135[i_158*2+:2] = c$n_29;
@@ -5210,10 +5217,10 @@ module clash_riscv
     wire  zipWith_in2_30;
     assign zipWith_in2_30 = shiftedP_30[i_163*1+:1];
     wire [1:0] c$n_30;
-    wire [1:0] c$case_alt_43;
-  assign c$case_alt_43 = (zipWith_in1_30 <= zipWith_in2_30) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_44;
+  assign c$case_alt_44 = (zipWith_in1_30 <= zipWith_in2_30) ? 2'd0 : 2'd2;
 
-  assign c$n_30 = (zipWith_in1_30 == zipWith_in2_30) ? 2'd1 : c$case_alt_43;
+  assign c$n_30 = (zipWith_in1_30 == zipWith_in2_30) ? 2'd1 : c$case_alt_44;
 
 
     assign c$app_arg_139[i_163*2+:2] = c$n_30;
@@ -5323,7 +5330,7 @@ module clash_riscv
 
 
 
-  assign c$eta_app_arg_0 = {result_24
+  assign c$eta_app_arg_0 = {result_25
                            ,iterateI_ho1_0_res
                            ,iterateI_ho1_1_res
                            ,iterateI_ho1_2_res
@@ -5393,15 +5400,15 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign result_25 = {c$app_arg_6,c$app_arg_7};
+  assign result_26 = {c$app_arg_6,c$app_arg_7};
 
   assign eta = c$eta_app_arg_0[96-1:0];
 
   assign wild_0 = $signed(c$wild_app_arg_0);
 
-  assign result_26 = wild_0;
+  assign result_27 = wild_0;
 
-  assign c$wild_app_arg_0 = $unsigned({{(64-6) {1'b0}},result_27});
+  assign c$wild_app_arg_0 = $unsigned({{(64-6) {1'b0}},result_28});
 
   // map begin
   genvar i_170;
@@ -5490,7 +5497,7 @@ module clash_riscv
   wire [5:0] acc_4_1;
   wire [5:0] acc_5_0;
   wire [5:0] acc_0_32;
-  assign result_27 = acc_6_0;
+  assign result_28 = acc_6_0;
 
   assign vec = c$wild_app_arg_1;
 
@@ -5690,7 +5697,7 @@ module clash_riscv
 
 
 
-  assign c$vec_69 = (({((result_5)),1'b0}));
+  assign c$vec_69 = (({((result_6)),1'b0}));
 
   // map begin
   genvar i_171;
@@ -5710,45 +5717,45 @@ module clash_riscv
   always @(*) begin
     case(x1)
       64'sd0 : c$ds_case_alt = {32'b11111111111111111111111111111111
-                               ,result_43};
-      default : c$ds_case_alt = result_25;
+                               ,result_44};
+      default : c$ds_case_alt = result_26;
     endcase
   end
 
-  assign result_28 = {c$ds_case_alt[63:32]
+  assign result_29 = {c$ds_case_alt[63:32]
                      ,c$ds_case_alt[31:0]};
 
-  assign x1 = result_26;
+  assign x1 = result_27;
 
-  assign result_29 = {c$ds_case_alt_0[63:32]
+  assign result_30 = {c$ds_case_alt_0[63:32]
                      ,c$ds_case_alt_0[31:0]};
 
   always @(*) begin
     case(x1_0)
       64'sd0 : c$ds_case_alt_0 = {32'b11111111111111111111111111111111
-                                 ,result_43};
-      default : c$ds_case_alt_0 = result_30;
+                                 ,result_44};
+      default : c$ds_case_alt_0 = result_31;
     endcase
   end
 
-  assign result_30 = c$ds2_case_scrut ? c$ds_case_alt_1 : {result_35[63:32]
-                                                          ,result_35[31:0]};
+  assign result_31 = c$ds2_case_scrut ? c$ds_case_alt_1 : {result_36[63:32]
+                                                          ,result_36[31:0]};
 
   always @(*) begin
     case(x2)
       64'sd1 : c$ds_case_alt_1 = c$ds_case_alt_2;
-      default : c$ds_case_alt_1 = {result_35[63:32]
-                                  ,result_35[31:0]};
+      default : c$ds_case_alt_1 = {result_36[63:32]
+                                  ,result_36[31:0]};
     endcase
   end
 
-  assign x2 = result_31;
+  assign x2 = result_32;
 
   assign wild_1 = $signed(c$wild_app_arg_2);
 
-  assign result_31 = wild_1;
+  assign result_32 = wild_1;
 
-  assign c$wild_app_arg_2 = $unsigned({{(64-6) {1'b0}},result_32});
+  assign c$wild_app_arg_2 = $unsigned({{(64-6) {1'b0}},result_33});
 
   // map begin
   genvar i_172;
@@ -5837,7 +5844,7 @@ module clash_riscv
   wire [5:0] acc_4_1_0;
   wire [5:0] acc_5_0_0;
   wire [5:0] acc_0_32_0;
-  assign result_32 = acc_6_0_0;
+  assign result_33 = acc_6_0_0;
 
   assign vec_0 = c$wild_app_arg_3;
 
@@ -6056,20 +6063,20 @@ module clash_riscv
 
   always @(*) begin
     case(x1_0)
-      64'sd32 : c$ds_case_alt_2 = {result_43
+      64'sd32 : c$ds_case_alt_2 = {result_44
                                   ,32'b00000000000000000000000000000000};
-      default : c$ds_case_alt_2 = {result_35[63:32]
-                                  ,result_35[31:0]};
+      default : c$ds_case_alt_2 = {result_36[63:32]
+                                  ,result_36[31:0]};
     endcase
   end
 
-  assign x1_0 = result_33;
+  assign x1_0 = result_34;
 
   assign wild_2 = $signed(c$wild_app_arg_4);
 
-  assign result_33 = wild_2;
+  assign result_34 = wild_2;
 
-  assign c$wild_app_arg_4 = $unsigned({{(64-6) {1'b0}},result_34});
+  assign c$wild_app_arg_4 = $unsigned({{(64-6) {1'b0}},result_35});
 
   // map begin
   genvar i_174;
@@ -6158,7 +6165,7 @@ module clash_riscv
   wire [5:0] acc_4_1_1;
   wire [5:0] acc_5_0_1;
   wire [5:0] acc_0_32_1;
-  assign result_34 = acc_6_0_1;
+  assign result_35 = acc_6_0_1;
 
   assign vec_1 = c$wild_app_arg_5;
 
@@ -6375,21 +6382,21 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign result_35 = (c$ds2_app_arg_3 == 1'b0) ? c$ds1_case_alt : c$ds1_case_alt_0;
+  assign result_36 = (c$ds2_app_arg_3 == 1'b0) ? c$ds1_case_alt : c$ds1_case_alt_0;
 
-  assign c$ds1_case_alt = c$ds1_case_scrut ? {result_37[63:32]
-                                             ,result_37[31:0]} : {c$ds1_app_arg
-                                                                 ,result_37[31:0]};
+  assign c$ds1_case_alt = c$ds1_case_scrut ? {result_38[63:32]
+                                             ,result_38[31:0]} : {c$ds1_app_arg
+                                                                 ,result_38[31:0]};
 
   assign c$ds1_case_alt_0 = c$ds1_case_scrut ? {c$ds1_app_arg
-                                               ,c$ds1_app_arg_0} : {result_37[63:32]
+                                               ,c$ds1_app_arg_0} : {result_38[63:32]
                                                                    ,c$ds1_app_arg_0};
 
   assign c$ds1_case_scrut = c$ds2_app_arg_0 == 1'b0;
 
-  assign c$ds1_app_arg = (~ result_37[63:32]) + 32'b00000000000000000000000000000001;
+  assign c$ds1_app_arg = (~ result_38[63:32]) + 32'b00000000000000000000000000000001;
 
-  assign c$ds1_app_arg_0 = (~ result_37[31:0]) + 32'b00000000000000000000000000000001;
+  assign c$ds1_app_arg_0 = (~ result_38[31:0]) + 32'b00000000000000000000000000000001;
 
   assign c$vec_72 = (c$ds2_app_arg);
 
@@ -6425,7 +6432,7 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign result_36 = {c$app_arg_8
+  assign result_37 = {c$app_arg_8
                      ,{32 {1'b0}}
                      ,{32 {1'b0}}};
 
@@ -6483,10 +6490,10 @@ module clash_riscv
     wire  zipWith_in2_31;
     assign zipWith_in2_31 = shiftedP_31[i_178*1+:1];
     wire [1:0] c$n_31;
-    wire [1:0] c$case_alt_44;
-  assign c$case_alt_44 = (zipWith_in1_31 <= zipWith_in2_31) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_45;
+  assign c$case_alt_45 = (zipWith_in1_31 <= zipWith_in2_31) ? 2'd0 : 2'd2;
 
-  assign c$n_31 = (zipWith_in1_31 == zipWith_in2_31) ? 2'd1 : c$case_alt_44;
+  assign c$n_31 = (zipWith_in1_31 == zipWith_in2_31) ? 2'd1 : c$case_alt_45;
 
 
     assign c$app_arg_146[i_178*2+:2] = c$n_31;
@@ -6569,9 +6576,9 @@ module clash_riscv
   assign c$case_scrut_32 = intermediate_31[0];
   // foldr end
 
-  assign \c$iterateI_ho1_0_res_0_sel_alt_63  = ({result_36[31:0],1'b0});
+  assign \c$iterateI_ho1_0_res_0_sel_alt_63  = ({result_37[31:0],1'b0});
 
-  assign \c$iterateI_ho1_0_res_0_sel_alt_64  = ({result_36[31:0],1'b1});
+  assign \c$iterateI_ho1_0_res_0_sel_alt_64  = ({result_37[31:0],1'b1});
 
   always @(*) begin
     case(c$case_scrut_32)
@@ -6584,13 +6591,13 @@ module clash_riscv
     endcase
   end
 
-  assign c$vec_75 = result_36[95:64];
+  assign c$vec_75 = result_37[95:64];
 
-  assign shiftedP_31_projection = ({result_36[63:32],c$vec_75[32-1 -: 1]});
+  assign shiftedP_31_projection = ({result_37[63:32],c$vec_75[32-1 -: 1]});
 
   assign shiftedP_31 = shiftedP_31_projection[31:0];
 
-  assign shiftedA_31_projection = ({result_36[95:64],1'b0});
+  assign shiftedA_31_projection = ({result_37[95:64],1'b0});
 
   assign shiftedA_31 = shiftedA_31_projection[31:0];
 
@@ -6618,10 +6625,10 @@ module clash_riscv
     wire  zipWith_in2_32;
     assign zipWith_in2_32 = shiftedP_32[i_183*1+:1];
     wire [1:0] c$n_32;
-    wire [1:0] c$case_alt_45;
-  assign c$case_alt_45 = (zipWith_in1_32 <= zipWith_in2_32) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_46;
+  assign c$case_alt_46 = (zipWith_in1_32 <= zipWith_in2_32) ? 2'd0 : 2'd2;
 
-  assign c$n_32 = (zipWith_in1_32 == zipWith_in2_32) ? 2'd1 : c$case_alt_45;
+  assign c$n_32 = (zipWith_in1_32 == zipWith_in2_32) ? 2'd1 : c$case_alt_46;
 
 
     assign c$app_arg_150[i_183*2+:2] = c$n_32;
@@ -6753,10 +6760,10 @@ module clash_riscv
     wire  zipWith_in2_33;
     assign zipWith_in2_33 = shiftedP_33[i_188*1+:1];
     wire [1:0] c$n_33;
-    wire [1:0] c$case_alt_46;
-  assign c$case_alt_46 = (zipWith_in1_33 <= zipWith_in2_33) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_47;
+  assign c$case_alt_47 = (zipWith_in1_33 <= zipWith_in2_33) ? 2'd0 : 2'd2;
 
-  assign c$n_33 = (zipWith_in1_33 == zipWith_in2_33) ? 2'd1 : c$case_alt_46;
+  assign c$n_33 = (zipWith_in1_33 == zipWith_in2_33) ? 2'd1 : c$case_alt_47;
 
 
     assign c$app_arg_154[i_188*2+:2] = c$n_33;
@@ -6888,10 +6895,10 @@ module clash_riscv
     wire  zipWith_in2_34;
     assign zipWith_in2_34 = shiftedP_34[i_193*1+:1];
     wire [1:0] c$n_34;
-    wire [1:0] c$case_alt_47;
-  assign c$case_alt_47 = (zipWith_in1_34 <= zipWith_in2_34) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_48;
+  assign c$case_alt_48 = (zipWith_in1_34 <= zipWith_in2_34) ? 2'd0 : 2'd2;
 
-  assign c$n_34 = (zipWith_in1_34 == zipWith_in2_34) ? 2'd1 : c$case_alt_47;
+  assign c$n_34 = (zipWith_in1_34 == zipWith_in2_34) ? 2'd1 : c$case_alt_48;
 
 
     assign c$app_arg_158[i_193*2+:2] = c$n_34;
@@ -7023,10 +7030,10 @@ module clash_riscv
     wire  zipWith_in2_35;
     assign zipWith_in2_35 = shiftedP_35[i_198*1+:1];
     wire [1:0] c$n_35;
-    wire [1:0] c$case_alt_48;
-  assign c$case_alt_48 = (zipWith_in1_35 <= zipWith_in2_35) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_49;
+  assign c$case_alt_49 = (zipWith_in1_35 <= zipWith_in2_35) ? 2'd0 : 2'd2;
 
-  assign c$n_35 = (zipWith_in1_35 == zipWith_in2_35) ? 2'd1 : c$case_alt_48;
+  assign c$n_35 = (zipWith_in1_35 == zipWith_in2_35) ? 2'd1 : c$case_alt_49;
 
 
     assign c$app_arg_162[i_198*2+:2] = c$n_35;
@@ -7158,10 +7165,10 @@ module clash_riscv
     wire  zipWith_in2_36;
     assign zipWith_in2_36 = shiftedP_36[i_203*1+:1];
     wire [1:0] c$n_36;
-    wire [1:0] c$case_alt_49;
-  assign c$case_alt_49 = (zipWith_in1_36 <= zipWith_in2_36) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_50;
+  assign c$case_alt_50 = (zipWith_in1_36 <= zipWith_in2_36) ? 2'd0 : 2'd2;
 
-  assign c$n_36 = (zipWith_in1_36 == zipWith_in2_36) ? 2'd1 : c$case_alt_49;
+  assign c$n_36 = (zipWith_in1_36 == zipWith_in2_36) ? 2'd1 : c$case_alt_50;
 
 
     assign c$app_arg_166[i_203*2+:2] = c$n_36;
@@ -7293,10 +7300,10 @@ module clash_riscv
     wire  zipWith_in2_37;
     assign zipWith_in2_37 = shiftedP_37[i_208*1+:1];
     wire [1:0] c$n_37;
-    wire [1:0] c$case_alt_50;
-  assign c$case_alt_50 = (zipWith_in1_37 <= zipWith_in2_37) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_51;
+  assign c$case_alt_51 = (zipWith_in1_37 <= zipWith_in2_37) ? 2'd0 : 2'd2;
 
-  assign c$n_37 = (zipWith_in1_37 == zipWith_in2_37) ? 2'd1 : c$case_alt_50;
+  assign c$n_37 = (zipWith_in1_37 == zipWith_in2_37) ? 2'd1 : c$case_alt_51;
 
 
     assign c$app_arg_170[i_208*2+:2] = c$n_37;
@@ -7428,10 +7435,10 @@ module clash_riscv
     wire  zipWith_in2_38;
     assign zipWith_in2_38 = shiftedP_38[i_213*1+:1];
     wire [1:0] c$n_38;
-    wire [1:0] c$case_alt_51;
-  assign c$case_alt_51 = (zipWith_in1_38 <= zipWith_in2_38) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_52;
+  assign c$case_alt_52 = (zipWith_in1_38 <= zipWith_in2_38) ? 2'd0 : 2'd2;
 
-  assign c$n_38 = (zipWith_in1_38 == zipWith_in2_38) ? 2'd1 : c$case_alt_51;
+  assign c$n_38 = (zipWith_in1_38 == zipWith_in2_38) ? 2'd1 : c$case_alt_52;
 
 
     assign c$app_arg_174[i_213*2+:2] = c$n_38;
@@ -7563,10 +7570,10 @@ module clash_riscv
     wire  zipWith_in2_39;
     assign zipWith_in2_39 = shiftedP_39[i_218*1+:1];
     wire [1:0] c$n_39;
-    wire [1:0] c$case_alt_52;
-  assign c$case_alt_52 = (zipWith_in1_39 <= zipWith_in2_39) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_53;
+  assign c$case_alt_53 = (zipWith_in1_39 <= zipWith_in2_39) ? 2'd0 : 2'd2;
 
-  assign c$n_39 = (zipWith_in1_39 == zipWith_in2_39) ? 2'd1 : c$case_alt_52;
+  assign c$n_39 = (zipWith_in1_39 == zipWith_in2_39) ? 2'd1 : c$case_alt_53;
 
 
     assign c$app_arg_178[i_218*2+:2] = c$n_39;
@@ -7698,10 +7705,10 @@ module clash_riscv
     wire  zipWith_in2_40;
     assign zipWith_in2_40 = shiftedP_40[i_223*1+:1];
     wire [1:0] c$n_40;
-    wire [1:0] c$case_alt_53;
-  assign c$case_alt_53 = (zipWith_in1_40 <= zipWith_in2_40) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_54;
+  assign c$case_alt_54 = (zipWith_in1_40 <= zipWith_in2_40) ? 2'd0 : 2'd2;
 
-  assign c$n_40 = (zipWith_in1_40 == zipWith_in2_40) ? 2'd1 : c$case_alt_53;
+  assign c$n_40 = (zipWith_in1_40 == zipWith_in2_40) ? 2'd1 : c$case_alt_54;
 
 
     assign c$app_arg_182[i_223*2+:2] = c$n_40;
@@ -7833,10 +7840,10 @@ module clash_riscv
     wire  zipWith_in2_41;
     assign zipWith_in2_41 = shiftedP_41[i_228*1+:1];
     wire [1:0] c$n_41;
-    wire [1:0] c$case_alt_54;
-  assign c$case_alt_54 = (zipWith_in1_41 <= zipWith_in2_41) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_55;
+  assign c$case_alt_55 = (zipWith_in1_41 <= zipWith_in2_41) ? 2'd0 : 2'd2;
 
-  assign c$n_41 = (zipWith_in1_41 == zipWith_in2_41) ? 2'd1 : c$case_alt_54;
+  assign c$n_41 = (zipWith_in1_41 == zipWith_in2_41) ? 2'd1 : c$case_alt_55;
 
 
     assign c$app_arg_186[i_228*2+:2] = c$n_41;
@@ -7968,10 +7975,10 @@ module clash_riscv
     wire  zipWith_in2_42;
     assign zipWith_in2_42 = shiftedP_42[i_233*1+:1];
     wire [1:0] c$n_42;
-    wire [1:0] c$case_alt_55;
-  assign c$case_alt_55 = (zipWith_in1_42 <= zipWith_in2_42) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_56;
+  assign c$case_alt_56 = (zipWith_in1_42 <= zipWith_in2_42) ? 2'd0 : 2'd2;
 
-  assign c$n_42 = (zipWith_in1_42 == zipWith_in2_42) ? 2'd1 : c$case_alt_55;
+  assign c$n_42 = (zipWith_in1_42 == zipWith_in2_42) ? 2'd1 : c$case_alt_56;
 
 
     assign c$app_arg_190[i_233*2+:2] = c$n_42;
@@ -8103,10 +8110,10 @@ module clash_riscv
     wire  zipWith_in2_43;
     assign zipWith_in2_43 = shiftedP_43[i_238*1+:1];
     wire [1:0] c$n_43;
-    wire [1:0] c$case_alt_56;
-  assign c$case_alt_56 = (zipWith_in1_43 <= zipWith_in2_43) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_57;
+  assign c$case_alt_57 = (zipWith_in1_43 <= zipWith_in2_43) ? 2'd0 : 2'd2;
 
-  assign c$n_43 = (zipWith_in1_43 == zipWith_in2_43) ? 2'd1 : c$case_alt_56;
+  assign c$n_43 = (zipWith_in1_43 == zipWith_in2_43) ? 2'd1 : c$case_alt_57;
 
 
     assign c$app_arg_194[i_238*2+:2] = c$n_43;
@@ -8238,10 +8245,10 @@ module clash_riscv
     wire  zipWith_in2_44;
     assign zipWith_in2_44 = shiftedP_44[i_243*1+:1];
     wire [1:0] c$n_44;
-    wire [1:0] c$case_alt_57;
-  assign c$case_alt_57 = (zipWith_in1_44 <= zipWith_in2_44) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_58;
+  assign c$case_alt_58 = (zipWith_in1_44 <= zipWith_in2_44) ? 2'd0 : 2'd2;
 
-  assign c$n_44 = (zipWith_in1_44 == zipWith_in2_44) ? 2'd1 : c$case_alt_57;
+  assign c$n_44 = (zipWith_in1_44 == zipWith_in2_44) ? 2'd1 : c$case_alt_58;
 
 
     assign c$app_arg_198[i_243*2+:2] = c$n_44;
@@ -8373,10 +8380,10 @@ module clash_riscv
     wire  zipWith_in2_45;
     assign zipWith_in2_45 = shiftedP_45[i_248*1+:1];
     wire [1:0] c$n_45;
-    wire [1:0] c$case_alt_58;
-  assign c$case_alt_58 = (zipWith_in1_45 <= zipWith_in2_45) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_59;
+  assign c$case_alt_59 = (zipWith_in1_45 <= zipWith_in2_45) ? 2'd0 : 2'd2;
 
-  assign c$n_45 = (zipWith_in1_45 == zipWith_in2_45) ? 2'd1 : c$case_alt_58;
+  assign c$n_45 = (zipWith_in1_45 == zipWith_in2_45) ? 2'd1 : c$case_alt_59;
 
 
     assign c$app_arg_202[i_248*2+:2] = c$n_45;
@@ -8508,10 +8515,10 @@ module clash_riscv
     wire  zipWith_in2_46;
     assign zipWith_in2_46 = shiftedP_46[i_253*1+:1];
     wire [1:0] c$n_46;
-    wire [1:0] c$case_alt_59;
-  assign c$case_alt_59 = (zipWith_in1_46 <= zipWith_in2_46) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_60;
+  assign c$case_alt_60 = (zipWith_in1_46 <= zipWith_in2_46) ? 2'd0 : 2'd2;
 
-  assign c$n_46 = (zipWith_in1_46 == zipWith_in2_46) ? 2'd1 : c$case_alt_59;
+  assign c$n_46 = (zipWith_in1_46 == zipWith_in2_46) ? 2'd1 : c$case_alt_60;
 
 
     assign c$app_arg_206[i_253*2+:2] = c$n_46;
@@ -8643,10 +8650,10 @@ module clash_riscv
     wire  zipWith_in2_47;
     assign zipWith_in2_47 = shiftedP_47[i_258*1+:1];
     wire [1:0] c$n_47;
-    wire [1:0] c$case_alt_60;
-  assign c$case_alt_60 = (zipWith_in1_47 <= zipWith_in2_47) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_61;
+  assign c$case_alt_61 = (zipWith_in1_47 <= zipWith_in2_47) ? 2'd0 : 2'd2;
 
-  assign c$n_47 = (zipWith_in1_47 == zipWith_in2_47) ? 2'd1 : c$case_alt_60;
+  assign c$n_47 = (zipWith_in1_47 == zipWith_in2_47) ? 2'd1 : c$case_alt_61;
 
 
     assign c$app_arg_210[i_258*2+:2] = c$n_47;
@@ -8778,10 +8785,10 @@ module clash_riscv
     wire  zipWith_in2_48;
     assign zipWith_in2_48 = shiftedP_48[i_263*1+:1];
     wire [1:0] c$n_48;
-    wire [1:0] c$case_alt_61;
-  assign c$case_alt_61 = (zipWith_in1_48 <= zipWith_in2_48) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_62;
+  assign c$case_alt_62 = (zipWith_in1_48 <= zipWith_in2_48) ? 2'd0 : 2'd2;
 
-  assign c$n_48 = (zipWith_in1_48 == zipWith_in2_48) ? 2'd1 : c$case_alt_61;
+  assign c$n_48 = (zipWith_in1_48 == zipWith_in2_48) ? 2'd1 : c$case_alt_62;
 
 
     assign c$app_arg_214[i_263*2+:2] = c$n_48;
@@ -8913,10 +8920,10 @@ module clash_riscv
     wire  zipWith_in2_49;
     assign zipWith_in2_49 = shiftedP_49[i_268*1+:1];
     wire [1:0] c$n_49;
-    wire [1:0] c$case_alt_62;
-  assign c$case_alt_62 = (zipWith_in1_49 <= zipWith_in2_49) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_63;
+  assign c$case_alt_63 = (zipWith_in1_49 <= zipWith_in2_49) ? 2'd0 : 2'd2;
 
-  assign c$n_49 = (zipWith_in1_49 == zipWith_in2_49) ? 2'd1 : c$case_alt_62;
+  assign c$n_49 = (zipWith_in1_49 == zipWith_in2_49) ? 2'd1 : c$case_alt_63;
 
 
     assign c$app_arg_218[i_268*2+:2] = c$n_49;
@@ -9048,10 +9055,10 @@ module clash_riscv
     wire  zipWith_in2_50;
     assign zipWith_in2_50 = shiftedP_50[i_273*1+:1];
     wire [1:0] c$n_50;
-    wire [1:0] c$case_alt_63;
-  assign c$case_alt_63 = (zipWith_in1_50 <= zipWith_in2_50) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_64;
+  assign c$case_alt_64 = (zipWith_in1_50 <= zipWith_in2_50) ? 2'd0 : 2'd2;
 
-  assign c$n_50 = (zipWith_in1_50 == zipWith_in2_50) ? 2'd1 : c$case_alt_63;
+  assign c$n_50 = (zipWith_in1_50 == zipWith_in2_50) ? 2'd1 : c$case_alt_64;
 
 
     assign c$app_arg_222[i_273*2+:2] = c$n_50;
@@ -9183,10 +9190,10 @@ module clash_riscv
     wire  zipWith_in2_51;
     assign zipWith_in2_51 = shiftedP_51[i_278*1+:1];
     wire [1:0] c$n_51;
-    wire [1:0] c$case_alt_64;
-  assign c$case_alt_64 = (zipWith_in1_51 <= zipWith_in2_51) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_65;
+  assign c$case_alt_65 = (zipWith_in1_51 <= zipWith_in2_51) ? 2'd0 : 2'd2;
 
-  assign c$n_51 = (zipWith_in1_51 == zipWith_in2_51) ? 2'd1 : c$case_alt_64;
+  assign c$n_51 = (zipWith_in1_51 == zipWith_in2_51) ? 2'd1 : c$case_alt_65;
 
 
     assign c$app_arg_226[i_278*2+:2] = c$n_51;
@@ -9318,10 +9325,10 @@ module clash_riscv
     wire  zipWith_in2_52;
     assign zipWith_in2_52 = shiftedP_52[i_283*1+:1];
     wire [1:0] c$n_52;
-    wire [1:0] c$case_alt_65;
-  assign c$case_alt_65 = (zipWith_in1_52 <= zipWith_in2_52) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_66;
+  assign c$case_alt_66 = (zipWith_in1_52 <= zipWith_in2_52) ? 2'd0 : 2'd2;
 
-  assign c$n_52 = (zipWith_in1_52 == zipWith_in2_52) ? 2'd1 : c$case_alt_65;
+  assign c$n_52 = (zipWith_in1_52 == zipWith_in2_52) ? 2'd1 : c$case_alt_66;
 
 
     assign c$app_arg_230[i_283*2+:2] = c$n_52;
@@ -9453,10 +9460,10 @@ module clash_riscv
     wire  zipWith_in2_53;
     assign zipWith_in2_53 = shiftedP_53[i_288*1+:1];
     wire [1:0] c$n_53;
-    wire [1:0] c$case_alt_66;
-  assign c$case_alt_66 = (zipWith_in1_53 <= zipWith_in2_53) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_67;
+  assign c$case_alt_67 = (zipWith_in1_53 <= zipWith_in2_53) ? 2'd0 : 2'd2;
 
-  assign c$n_53 = (zipWith_in1_53 == zipWith_in2_53) ? 2'd1 : c$case_alt_66;
+  assign c$n_53 = (zipWith_in1_53 == zipWith_in2_53) ? 2'd1 : c$case_alt_67;
 
 
     assign c$app_arg_234[i_288*2+:2] = c$n_53;
@@ -9588,10 +9595,10 @@ module clash_riscv
     wire  zipWith_in2_54;
     assign zipWith_in2_54 = shiftedP_54[i_293*1+:1];
     wire [1:0] c$n_54;
-    wire [1:0] c$case_alt_67;
-  assign c$case_alt_67 = (zipWith_in1_54 <= zipWith_in2_54) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_68;
+  assign c$case_alt_68 = (zipWith_in1_54 <= zipWith_in2_54) ? 2'd0 : 2'd2;
 
-  assign c$n_54 = (zipWith_in1_54 == zipWith_in2_54) ? 2'd1 : c$case_alt_67;
+  assign c$n_54 = (zipWith_in1_54 == zipWith_in2_54) ? 2'd1 : c$case_alt_68;
 
 
     assign c$app_arg_238[i_293*2+:2] = c$n_54;
@@ -9723,10 +9730,10 @@ module clash_riscv
     wire  zipWith_in2_55;
     assign zipWith_in2_55 = shiftedP_55[i_298*1+:1];
     wire [1:0] c$n_55;
-    wire [1:0] c$case_alt_68;
-  assign c$case_alt_68 = (zipWith_in1_55 <= zipWith_in2_55) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_69;
+  assign c$case_alt_69 = (zipWith_in1_55 <= zipWith_in2_55) ? 2'd0 : 2'd2;
 
-  assign c$n_55 = (zipWith_in1_55 == zipWith_in2_55) ? 2'd1 : c$case_alt_68;
+  assign c$n_55 = (zipWith_in1_55 == zipWith_in2_55) ? 2'd1 : c$case_alt_69;
 
 
     assign c$app_arg_242[i_298*2+:2] = c$n_55;
@@ -9858,10 +9865,10 @@ module clash_riscv
     wire  zipWith_in2_56;
     assign zipWith_in2_56 = shiftedP_56[i_303*1+:1];
     wire [1:0] c$n_56;
-    wire [1:0] c$case_alt_69;
-  assign c$case_alt_69 = (zipWith_in1_56 <= zipWith_in2_56) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_70;
+  assign c$case_alt_70 = (zipWith_in1_56 <= zipWith_in2_56) ? 2'd0 : 2'd2;
 
-  assign c$n_56 = (zipWith_in1_56 == zipWith_in2_56) ? 2'd1 : c$case_alt_69;
+  assign c$n_56 = (zipWith_in1_56 == zipWith_in2_56) ? 2'd1 : c$case_alt_70;
 
 
     assign c$app_arg_246[i_303*2+:2] = c$n_56;
@@ -9993,10 +10000,10 @@ module clash_riscv
     wire  zipWith_in2_57;
     assign zipWith_in2_57 = shiftedP_57[i_308*1+:1];
     wire [1:0] c$n_57;
-    wire [1:0] c$case_alt_70;
-  assign c$case_alt_70 = (zipWith_in1_57 <= zipWith_in2_57) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_71;
+  assign c$case_alt_71 = (zipWith_in1_57 <= zipWith_in2_57) ? 2'd0 : 2'd2;
 
-  assign c$n_57 = (zipWith_in1_57 == zipWith_in2_57) ? 2'd1 : c$case_alt_70;
+  assign c$n_57 = (zipWith_in1_57 == zipWith_in2_57) ? 2'd1 : c$case_alt_71;
 
 
     assign c$app_arg_250[i_308*2+:2] = c$n_57;
@@ -10128,10 +10135,10 @@ module clash_riscv
     wire  zipWith_in2_58;
     assign zipWith_in2_58 = shiftedP_58[i_313*1+:1];
     wire [1:0] c$n_58;
-    wire [1:0] c$case_alt_71;
-  assign c$case_alt_71 = (zipWith_in1_58 <= zipWith_in2_58) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_72;
+  assign c$case_alt_72 = (zipWith_in1_58 <= zipWith_in2_58) ? 2'd0 : 2'd2;
 
-  assign c$n_58 = (zipWith_in1_58 == zipWith_in2_58) ? 2'd1 : c$case_alt_71;
+  assign c$n_58 = (zipWith_in1_58 == zipWith_in2_58) ? 2'd1 : c$case_alt_72;
 
 
     assign c$app_arg_254[i_313*2+:2] = c$n_58;
@@ -10263,10 +10270,10 @@ module clash_riscv
     wire  zipWith_in2_59;
     assign zipWith_in2_59 = shiftedP_59[i_318*1+:1];
     wire [1:0] c$n_59;
-    wire [1:0] c$case_alt_72;
-  assign c$case_alt_72 = (zipWith_in1_59 <= zipWith_in2_59) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_73;
+  assign c$case_alt_73 = (zipWith_in1_59 <= zipWith_in2_59) ? 2'd0 : 2'd2;
 
-  assign c$n_59 = (zipWith_in1_59 == zipWith_in2_59) ? 2'd1 : c$case_alt_72;
+  assign c$n_59 = (zipWith_in1_59 == zipWith_in2_59) ? 2'd1 : c$case_alt_73;
 
 
     assign c$app_arg_258[i_318*2+:2] = c$n_59;
@@ -10398,10 +10405,10 @@ module clash_riscv
     wire  zipWith_in2_60;
     assign zipWith_in2_60 = shiftedP_60[i_323*1+:1];
     wire [1:0] c$n_60;
-    wire [1:0] c$case_alt_73;
-  assign c$case_alt_73 = (zipWith_in1_60 <= zipWith_in2_60) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_74;
+  assign c$case_alt_74 = (zipWith_in1_60 <= zipWith_in2_60) ? 2'd0 : 2'd2;
 
-  assign c$n_60 = (zipWith_in1_60 == zipWith_in2_60) ? 2'd1 : c$case_alt_73;
+  assign c$n_60 = (zipWith_in1_60 == zipWith_in2_60) ? 2'd1 : c$case_alt_74;
 
 
     assign c$app_arg_262[i_323*2+:2] = c$n_60;
@@ -10533,10 +10540,10 @@ module clash_riscv
     wire  zipWith_in2_61;
     assign zipWith_in2_61 = shiftedP_61[i_328*1+:1];
     wire [1:0] c$n_61;
-    wire [1:0] c$case_alt_74;
-  assign c$case_alt_74 = (zipWith_in1_61 <= zipWith_in2_61) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_75;
+  assign c$case_alt_75 = (zipWith_in1_61 <= zipWith_in2_61) ? 2'd0 : 2'd2;
 
-  assign c$n_61 = (zipWith_in1_61 == zipWith_in2_61) ? 2'd1 : c$case_alt_74;
+  assign c$n_61 = (zipWith_in1_61 == zipWith_in2_61) ? 2'd1 : c$case_alt_75;
 
 
     assign c$app_arg_266[i_328*2+:2] = c$n_61;
@@ -10668,10 +10675,10 @@ module clash_riscv
     wire  zipWith_in2_62;
     assign zipWith_in2_62 = shiftedP_62[i_333*1+:1];
     wire [1:0] c$n_62;
-    wire [1:0] c$case_alt_75;
-  assign c$case_alt_75 = (zipWith_in1_62 <= zipWith_in2_62) ? 2'd0 : 2'd2;
+    wire [1:0] c$case_alt_76;
+  assign c$case_alt_76 = (zipWith_in1_62 <= zipWith_in2_62) ? 2'd0 : 2'd2;
 
-  assign c$n_62 = (zipWith_in1_62 == zipWith_in2_62) ? 2'd1 : c$case_alt_75;
+  assign c$n_62 = (zipWith_in1_62 == zipWith_in2_62) ? 2'd1 : c$case_alt_76;
 
 
     assign c$app_arg_270[i_333*2+:2] = c$n_62;
@@ -10781,7 +10788,7 @@ module clash_riscv
 
 
 
-  assign c$eta_app_arg_2 = {result_36
+  assign c$eta_app_arg_2 = {result_37
                            ,iterateI_ho1_0_res_0
                            ,iterateI_ho1_1_res_0
                            ,iterateI_ho1_2_res_0
@@ -10851,59 +10858,59 @@ module clash_riscv
   endgenerate
   // map end
 
-  assign result_37 = {c$app_arg_9,c$app_arg_10};
+  assign result_38 = {c$app_arg_9,c$app_arg_10};
 
   assign eta_0 = c$eta_app_arg_2[96-1:0];
 
-  assign c$ds2_app_arg = (c$ds2_app_arg_0 == 1'b1) ? ($unsigned(((c$ds_app_arg < 32'sd0) ? -c$ds_app_arg : c$ds_app_arg))) : result_5;
+  assign c$ds2_app_arg = (c$ds2_app_arg_0 == 1'b1) ? ($unsigned(((c$ds_app_arg < 32'sd0) ? -c$ds_app_arg : c$ds_app_arg))) : result_6;
 
-  assign c$ds2_app_arg_0 = result_5[(64'sd31)];
+  assign c$ds2_app_arg_0 = result_6[(64'sd31)];
 
-  assign c$ds2_app_arg_1 = c$ds2_case_scrut ? ($unsigned(((c$ds2_app_arg_2 < 32'sd0) ? -c$ds2_app_arg_2 : c$ds2_app_arg_2))) : result_43;
+  assign c$ds2_app_arg_1 = c$ds2_case_scrut ? ($unsigned(((c$ds2_app_arg_2 < 32'sd0) ? -c$ds2_app_arg_2 : c$ds2_app_arg_2))) : result_44;
 
   assign c$ds2_case_scrut = c$ds2_app_arg_3 == 1'b1;
 
-  assign c$ds2_app_arg_2 = $signed(result_43);
+  assign c$ds2_app_arg_2 = $signed(result_44);
 
-  assign c$ds2_app_arg_3 = result_43[(64'sd31)];
+  assign c$ds2_app_arg_3 = result_44[(64'sd31)];
 
-  assign c$ds_app_arg = $signed(result_5);
+  assign c$ds_app_arg = $signed(result_6);
 
   always @(*) begin
     case(c$$j_case_scrut)
-      7'b0110011 : result_38 = c$case_alt_8;
-      default : result_38 = result_40;
+      7'b0110011 : result_39 = c$case_alt_9;
+      default : result_39 = result_41;
     endcase
   end
 
-  assign c$case_alt_8_selection_res = pipeline_lvl54_instr_2[31 : 25];
+  assign c$case_alt_9_selection_res = pipeline_lvl54_instr_2[31 : 25];
 
   always @(*) begin
-    case(c$case_alt_8_selection_res)
-      7'b0000001 : c$case_alt_8 = result_39;
-      default : c$case_alt_8 = result_40;
+    case(c$case_alt_9_selection_res)
+      7'b0000001 : c$case_alt_9 = result_40;
+      default : c$case_alt_9 = result_41;
     endcase
   end
 
   always @(*) begin
     case(ds)
-      3'b000 : result_39 = 4'd8;
-      3'b001 : result_39 = 4'd9;
-      3'b010 : result_39 = 4'd10;
-      3'b011 : result_39 = 4'd11;
-      3'b100 : result_39 = 4'd12;
-      3'b101 : result_39 = 4'd13;
-      3'b110 : result_39 = 4'd14;
-      3'b111 : result_39 = 4'd15;
-      default : result_39 = {4 {1'bx}};
+      3'b000 : result_40 = 4'd8;
+      3'b001 : result_40 = 4'd9;
+      3'b010 : result_40 = 4'd10;
+      3'b011 : result_40 = 4'd11;
+      3'b100 : result_40 = 4'd12;
+      3'b101 : result_40 = 4'd13;
+      3'b110 : result_40 = 4'd14;
+      3'b111 : result_40 = 4'd15;
+      default : result_40 = {4 {1'bx}};
     endcase
   end
 
   always @(*) begin
     case(c$$j_case_scrut)
-      7'b0010011 : result_40 = result_41;
-      7'b0110011 : result_40 = result_41;
-      default : result_40 = 4'd0;
+      7'b0010011 : result_41 = result_42;
+      7'b0110011 : result_41 = result_42;
+      default : result_41 = 4'd0;
     endcase
   end
 
@@ -10911,15 +10918,15 @@ module clash_riscv
 
   always @(*) begin
     case(ds)
-      3'b000 : result_41 = 4'd0;
-      3'b001 : result_41 = 4'd6;
-      3'b010 : result_41 = 4'd1;
-      3'b011 : result_41 = 4'd2;
-      3'b100 : result_41 = 4'd5;
-      3'b101 : result_41 = 4'd7;
-      3'b110 : result_41 = 4'd4;
-      3'b111 : result_41 = 4'd3;
-      default : result_41 = {4 {1'bx}};
+      3'b000 : result_42 = 4'd0;
+      3'b001 : result_42 = 4'd6;
+      3'b010 : result_42 = 4'd1;
+      3'b011 : result_42 = 4'd2;
+      3'b100 : result_42 = 4'd5;
+      3'b101 : result_42 = 4'd7;
+      3'b110 : result_42 = 4'd4;
+      3'b111 : result_42 = 4'd3;
+      default : result_42 = {4 {1'bx}};
     endcase
   end
 
@@ -10927,16 +10934,16 @@ module clash_riscv
 
   assign bv_0 = pipeline_lvl54_instr_2[30 : 30];
 
-  assign result_42_selection_res = pipeline_lvl54_instr_2[6 : 0];
+  assign result_43_selection_res = pipeline_lvl54_instr_2[6 : 0];
 
   always @(*) begin
-    case(result_42_selection_res)
-      7'b0110011 : result_42 = bv_0 == 1'b1;
-      default : result_42 = 1'b0;
+    case(result_43_selection_res)
+      7'b0110011 : result_43 = bv_0 == 1'b1;
+      default : result_43 = 1'b0;
     endcase
   end
 
-  assign result_43 = pipeline_lvl53_aluOp1IsRegister_2 ? t_1 : f2_0;
+  assign result_44 = pipeline_lvl53_aluOp1IsRegister_2 ? t_1 : f2_0;
 
   assign f2_0 = (pipeline_lvl52_pc_2);
 
@@ -10965,16 +10972,16 @@ module clash_riscv
     if ( reset) begin
       pc_0 <= 32'd4294967292;
     end else  if (c$pc_1_app_arg)  begin
-      pc_0 <= result_44;
+      pc_0 <= result_45;
     end
   end
   // register end
 
   assign \c$$j_0  = pipeline_lvl53_isJumpingViaRegister_2 ? (aluAddSub) : c$$j_case_alt_0;
 
-  assign result_44 = result_4 ? \c$$j_0  : c$case_alt_9;
+  assign result_45 = result_5 ? \c$$j_0  : c$case_alt_10;
 
-  assign c$case_alt_9 = pipeline_lvl53_isBranching_2 ? (pipeline_lvl52_pc_2 + 32'd4) : \c$$j_0 ;
+  assign c$case_alt_10 = pipeline_lvl53_isBranching_2 ? (pipeline_lvl52_pc_2 + 32'd4) : \c$$j_0 ;
 
   assign c$$j_case_alt_0_selection_res = instr_1[6 : 0];
 
@@ -10996,7 +11003,7 @@ module clash_riscv
 
   assign x_7 = {({({(instr_1[31 : 31]),(instr_1[7 : 7])}),(instr_1[30 : 25])}),(instr_1[11 : 8])};
 
-  assign aluAddSub = result_21[63:32];
+  assign aluAddSub = result_22[63:32];
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl53_isBranching_2_register
@@ -11027,7 +11034,7 @@ module clash_riscv
   always @(*) begin
     case(pipeline_lvl56_forwardALUOp1_2)
       2'b00 : t_1 = pipeline_lvl54_execRes_3;
-      2'b01 : t_1 = result_12;
+      2'b01 : t_1 = result_13;
       default : t_1 = pipeline_lvl54_rs1Data_2;
     endcase
   end
@@ -11037,7 +11044,7 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl54_rs1Data_2 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_rs1Data_2 <= result_46;
+      pipeline_lvl54_rs1Data_2 <= result_47;
     end
   end
   // register end
@@ -11049,18 +11056,18 @@ module clash_riscv
   genvar i_340;
   generate
   for (i_340=0; i_340 < 32; i_340=i_340+1) begin : mk_array_2
-    assign vecArray_2[(32-1)-i_340] = result_47[i_340*32+:32];
+    assign vecArray_2[(32-1)-i_340] = result_48[i_340*32+:32];
   end
   endgenerate
-  assign result_45 = vecArray_2[(wild1_2)];
+  assign result_46 = vecArray_2[(wild1_2)];
   // index end
 
   assign c$wild1_app_arg_2 = $unsigned({{(64-5) {1'b0}},rs1Addr_1});
 
   always @(*) begin
     case(rs1Addr_1)
-      5'd0 : result_46 = 32'b00000000000000000000000000000000;
-      default : result_46 = result_45;
+      5'd0 : result_47 = 32'b00000000000000000000000000000000;
+      default : result_47 = result_46;
     endcase
   end
 
@@ -11069,16 +11076,16 @@ module clash_riscv
     if ( reset) begin
       c$ds_app_arg_0 <= {32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000,32'b00000000000000000000000000000000};
     end else   begin
-      c$ds_app_arg_0 <= result_48[2047:1024];
+      c$ds_app_arg_0 <= result_49[2047:1024];
     end
   end
   // register end
 
-  assign result_47 = result_48[1023:0];
+  assign result_48 = result_49[1023:0];
 
-  assign \regFile'  = pipeline_lvl53_regWriteEn_4 ? result_49 : c$ds_app_arg_0;
+  assign \regFile'  = pipeline_lvl53_regWriteEn_4 ? result_50 : c$ds_app_arg_0;
 
-  assign result_48 = {\regFile' ,\regFile' };
+  assign result_49 = {\regFile' ,\regFile' };
 
   assign wild2 = $signed(c$wild2_app_arg);
 
@@ -11086,7 +11093,7 @@ module clash_riscv
   genvar i_341;
   generate
   for (i_341=0;i_341<32;i_341=i_341+1) begin : vector_replace
-    assign result_49[(31-i_341)*32+:32] = (wild2) == i_341 ? result_12 : c$ds_app_arg_0[(31-i_341)*32+:32];
+    assign result_50[(31-i_341)*32+:32] = (wild2) == i_341 ? result_13 : c$ds_app_arg_0[(31-i_341)*32+:32];
   end
   endgenerate
   // vector replace end
@@ -11108,20 +11115,20 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl53_regWriteEn_3 <= 1'b0;
     end else   begin
-      pipeline_lvl53_regWriteEn_3 <= result_50;
+      pipeline_lvl53_regWriteEn_3 <= result_51;
     end
   end
   // register end
 
   always @(*) begin
     case(c$app_arg_11)
-      7'b0000011 : result_50 = 1'b1;
-      7'b0010011 : result_50 = 1'b1;
-      7'b0110011 : result_50 = 1'b1;
-      7'b0010111 : result_50 = 1'b1;
-      7'b0110111 : result_50 = 1'b1;
-      7'b1101111 : result_50 = 1'b1;
-      default : result_50 = c$app_arg_11 == 7'b1100111;
+      7'b0000011 : result_51 = 1'b1;
+      7'b0010011 : result_51 = 1'b1;
+      7'b0110011 : result_51 = 1'b1;
+      7'b0010111 : result_51 = 1'b1;
+      7'b0110111 : result_51 = 1'b1;
+      7'b1101111 : result_51 = 1'b1;
+      default : result_51 = c$app_arg_11 == 7'b1100111;
     endcase
   end
 
@@ -11146,42 +11153,42 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl56_forwardALUOp1_2 <= 2'd2;
     end else   begin
-      pipeline_lvl56_forwardALUOp1_2 <= result_54;
+      pipeline_lvl56_forwardALUOp1_2 <= result_55;
     end
   end
   // register end
 
   assign \c$$j_1  = (((pipeline_lvl54_instr_3[11 : 7])) == rs1Addr_1) ? c$$j_case_alt_2 : 2'd2;
 
-  assign result_51 = (((pipeline_lvl54_instr_2[11 : 7])) == rs1Addr_1) ? c$case_alt_10 : \c$$j_1 ;
+  assign result_52 = (((pipeline_lvl54_instr_2[11 : 7])) == rs1Addr_1) ? c$case_alt_11 : \c$$j_1 ;
 
-  assign c$case_alt_10 = result_52 ? 2'd0 : \c$$j_1 ;
+  assign c$case_alt_11 = result_53 ? 2'd0 : \c$$j_1 ;
 
   always @(*) begin
     case(c$app_arg_12)
-      7'b0000011 : result_52 = 1'b1;
-      7'b0010011 : result_52 = 1'b1;
-      7'b0110011 : result_52 = 1'b1;
-      7'b0010111 : result_52 = 1'b1;
-      7'b0110111 : result_52 = 1'b1;
-      7'b1101111 : result_52 = 1'b1;
-      default : result_52 = c$app_arg_12 == 7'b1100111;
-    endcase
-  end
-
-  assign c$app_arg_12 = pipeline_lvl54_instr_2[6 : 0];
-
-  assign c$$j_case_alt_2 = result_53 ? 2'd1 : 2'd2;
-
-  always @(*) begin
-    case(c$app_arg_13)
       7'b0000011 : result_53 = 1'b1;
       7'b0010011 : result_53 = 1'b1;
       7'b0110011 : result_53 = 1'b1;
       7'b0010111 : result_53 = 1'b1;
       7'b0110111 : result_53 = 1'b1;
       7'b1101111 : result_53 = 1'b1;
-      default : result_53 = c$app_arg_13 == 7'b1100111;
+      default : result_53 = c$app_arg_12 == 7'b1100111;
+    endcase
+  end
+
+  assign c$app_arg_12 = pipeline_lvl54_instr_2[6 : 0];
+
+  assign c$$j_case_alt_2 = result_54 ? 2'd1 : 2'd2;
+
+  always @(*) begin
+    case(c$app_arg_13)
+      7'b0000011 : result_54 = 1'b1;
+      7'b0010011 : result_54 = 1'b1;
+      7'b0110011 : result_54 = 1'b1;
+      7'b0010111 : result_54 = 1'b1;
+      7'b0110111 : result_54 = 1'b1;
+      7'b1101111 : result_54 = 1'b1;
+      default : result_54 = c$app_arg_13 == 7'b1100111;
     endcase
   end
 
@@ -11189,8 +11196,8 @@ module clash_riscv
 
   always @(*) begin
     case(rs1Addr_1)
-      5'd0 : result_54 = 2'd2;
-      default : result_54 = result_51;
+      5'd0 : result_55 = 2'd2;
+      default : result_55 = result_52;
     endcase
   end
 
@@ -11252,23 +11259,23 @@ module clash_riscv
     if ( reset) begin
       pipeline_lvl54_imm_2 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_imm_2 <= result_55;
+      pipeline_lvl54_imm_2 <= result_56;
     end
   end
   // register end
 
-  assign result_55_selection_res = instr_1[6 : 0];
+  assign result_56_selection_res = instr_1[6 : 0];
 
   assign c$s_3 = ($signed(x_8));
 
   always @(*) begin
-    case(result_55_selection_res)
-      7'b0010111 : result_55 = {(instr_1[31 : 12]),12'b000000000000};
-      7'b0000011 : result_55 = result_56;
-      7'b0100011 : result_55 = $unsigned(($signed({{(32-12) {c$s_3[12-1]}},c$s_3})));
-      7'b0010011 : result_55 = result_56;
-      7'b1100111 : result_55 = result_56;
-      default : result_55 = 32'b00000000000000000000000000000000;
+    case(result_56_selection_res)
+      7'b0010111 : result_56 = {(instr_1[31 : 12]),12'b000000000000};
+      7'b0000011 : result_56 = result_57;
+      7'b0100011 : result_56 = $unsigned(($signed({{(32-12) {c$s_3[12-1]}},c$s_3})));
+      7'b0010011 : result_56 = result_57;
+      7'b1100111 : result_56 = result_57;
+      default : result_56 = 32'b00000000000000000000000000000000;
     endcase
   end
 
@@ -11276,7 +11283,7 @@ module clash_riscv
 
   assign c$s_4 = ($signed(x_9));
 
-  assign result_56 = $unsigned(($signed({{(32-12) {c$s_4[12-1]}},c$s_4})));
+  assign result_57 = $unsigned(($signed({{(32-12) {c$s_4[12-1]}},c$s_4})));
 
   assign x_9 = instr_1[31 : 20];
 
@@ -11303,7 +11310,7 @@ module clash_riscv
 
   assign c$b_app_arg_1 = instr_1[6 : 0];
 
-  assign result_57 = pipeline_lvl53_b_0 ? pipeline_lvl54_t_0 : f2_1;
+  assign result_58 = pipeline_lvl53_b_0 ? pipeline_lvl54_t_0 : f2_1;
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl53_b_0_register
@@ -11315,31 +11322,31 @@ module clash_riscv
   end
   // register end
 
-  assign instrStall = c$case_alt[0:0];
+  assign instrStall = c$case_alt_0[0:0];
 
-  assign f2_1 = c$case_alt[32:1];
+  assign f2_1 = c$case_alt_0[32:1];
 
   // register begin
   always @(posedge clk ) begin : pipeline_lvl54_t_0_register
     if ( reset) begin
       pipeline_lvl54_t_0 <= 32'b00000000000000000000000000000000;
     end else   begin
-      pipeline_lvl54_t_0 <= result_57;
+      pipeline_lvl54_t_0 <= result_58;
     end
   end
   // register end
 
   assign c$pc_1_app_arg = ~ stallStage2OrEarlier;
 
-  assign rdAddr = result[2035:2004];
+  assign rdAddr = result_0[2035:2004];
 
-  assign wrAddr = result[2003:1972];
+  assign wrAddr = result_0[2003:1972];
 
-  assign dat = result[1971:1940];
+  assign dat = result_0[1971:1940];
 
-  assign strb = result[1939:1936];
+  assign strb = result_0[1939:1936];
 
-  assign c$case_alt_11 = {c$app_arg_14
+  assign c$case_alt_12 = {c$app_arg_14
                          ,dat
                          ,strb
                          ,1'b1
@@ -11359,13 +11366,23 @@ module clash_riscv
                             ,32'b00000000000000000000000000000000
                             ,4'b1111
                             ,1'b1
-                            ,1'b1
+                            ,instructionSTB
                             ,1'b0
                             ,3'b000
                             ,2'b00}
-                           ,c$case_alt_11};
+                           ,c$case_alt_12};
 
-  assign addr1 = result[2065:2036];
+  // register begin
+  always @(posedge clk ) begin : instructionSTB_register
+    if ( reset) begin
+      instructionSTB <= 1'b1;
+    end else   begin
+      instructionSTB <= result;
+    end
+  end
+  // register end
+
+  assign addr1 = result_0[2065:2036];
 
   assign _clash_internal_0 = _clash_internal[149:76];
 
